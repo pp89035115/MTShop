@@ -7,25 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		342185161FE375110037A48C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185151FE375110037A48C /* AppDelegate.m */; };
-		342185191FE375110037A48C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185181FE375110037A48C /* ViewController.m */; };
-		3421851C1FE375110037A48C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3421851A1FE375110037A48C /* Main.storyboard */; };
 		3421851E1FE375110037A48C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3421851D1FE375110037A48C /* Assets.xcassets */; };
-		342185211FE375110037A48C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3421851F1FE375110037A48C /* LaunchScreen.storyboard */; };
 		342185241FE375110037A48C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185231FE375110037A48C /* main.m */; };
+		3421852D1FE37AEE0037A48C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421852C1FE37AEE0037A48C /* AppDelegate.m */; };
+		342185351FE37B140037A48C /* MTHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185341FE37B140037A48C /* MTHomeController.m */; };
+		342185381FE37B230037A48C /* MTHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185371FE37B230037A48C /* MTHomeModel.m */; };
+		3421853B1FE37B2E0037A48C /* MTHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421853A1FE37B2E0037A48C /* MTHomeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		342185111FE375110037A48C /* MTShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		342185141FE375110037A48C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		342185151FE375110037A48C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		342185171FE375110037A48C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		342185181FE375110037A48C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3421851B1FE375110037A48C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3421851D1FE375110037A48C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		342185201FE375110037A48C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		342185221FE375110037A48C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		342185231FE375110037A48C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3421852B1FE37AEE0037A48C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3421852C1FE37AEE0037A48C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		342185331FE37B140037A48C /* MTHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeController.h; sourceTree = "<group>"; };
+		342185341FE37B140037A48C /* MTHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeController.m; sourceTree = "<group>"; };
+		342185361FE37B230037A48C /* MTHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeModel.h; sourceTree = "<group>"; };
+		342185371FE37B230037A48C /* MTHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeModel.m; sourceTree = "<group>"; };
+		342185391FE37B2E0037A48C /* MTHomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeView.h; sourceTree = "<group>"; };
+		3421853A1FE37B2E0037A48C /* MTHomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +60,67 @@
 		342185131FE375110037A48C /* MTShop */ = {
 			isa = PBXGroup;
 			children = (
-				342185141FE375110037A48C /* AppDelegate.h */,
-				342185151FE375110037A48C /* AppDelegate.m */,
-				342185171FE375110037A48C /* ViewController.h */,
-				342185181FE375110037A48C /* ViewController.m */,
-				3421851A1FE375110037A48C /* Main.storyboard */,
+				3421852A1FE37AEE0037A48C /* AppDelegate */,
+				3421852E1FE37AF50037A48C /* Classes */,
 				3421851D1FE375110037A48C /* Assets.xcassets */,
-				3421851F1FE375110037A48C /* LaunchScreen.storyboard */,
 				342185221FE375110037A48C /* Info.plist */,
 				342185231FE375110037A48C /* main.m */,
 			);
 			path = MTShop;
+			sourceTree = "<group>";
+		};
+		3421852A1FE37AEE0037A48C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3421852B1FE37AEE0037A48C /* AppDelegate.h */,
+				3421852C1FE37AEE0037A48C /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3421852E1FE37AF50037A48C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3421852F1FE37AF50037A48C /* Home */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3421852F1FE37AF50037A48C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				342185301FE37AF50037A48C /* Controller */,
+				342185311FE37AF50037A48C /* Model */,
+				342185321FE37AF50037A48C /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		342185301FE37AF50037A48C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				342185331FE37B140037A48C /* MTHomeController.h */,
+				342185341FE37B140037A48C /* MTHomeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		342185311FE37AF50037A48C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				342185361FE37B230037A48C /* MTHomeModel.h */,
+				342185371FE37B230037A48C /* MTHomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		342185321FE37AF50037A48C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				342185391FE37B2E0037A48C /* MTHomeView.h */,
+				3421853A1FE37B2E0037A48C /* MTHomeView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				342185211FE375110037A48C /* LaunchScreen.storyboard in Resources */,
 				3421851E1FE375110037A48C /* Assets.xcassets in Resources */,
-				3421851C1FE375110037A48C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,32 +192,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				342185191FE375110037A48C /* ViewController.m in Sources */,
+				3421853B1FE37B2E0037A48C /* MTHomeView.m in Sources */,
+				3421852D1FE37AEE0037A48C /* AppDelegate.m in Sources */,
 				342185241FE375110037A48C /* main.m in Sources */,
-				342185161FE375110037A48C /* AppDelegate.m in Sources */,
+				342185351FE37B140037A48C /* MTHomeController.m in Sources */,
+				342185381FE37B230037A48C /* MTHomeModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		3421851A1FE375110037A48C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3421851B1FE375110037A48C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3421851F1FE375110037A48C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				342185201FE375110037A48C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		342185251FE375110037A48C /* Debug */ = {
@@ -279,7 +312,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9CQ24Z5PJ5;
 				INFOPLIST_FILE = MTShop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MT.MTShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,7 +327,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9CQ24Z5PJ5;
 				INFOPLIST_FILE = MTShop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MT.MTShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
