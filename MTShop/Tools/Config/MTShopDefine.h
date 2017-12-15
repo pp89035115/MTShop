@@ -16,4 +16,9 @@
 #import "MJExtension.h"
 #import "MJRefresh.h"
 
+#import "MTBaseTableViewCell.h"
+
+#define MTMainColor LHColor (69,199,90)
+
+
 #endif /* MTShopDefine_h */

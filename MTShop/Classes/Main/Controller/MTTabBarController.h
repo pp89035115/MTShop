@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MTHomeController.h"
+#import "MTNearbyController.h"
+#import "MTPublishController.h"
+#import "MTMessageController.h"
+#import "MTMineController.h"
 @interface MTTabBarController : UITabBarController
 
 @end
