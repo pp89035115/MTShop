@@ -29,6 +29,9 @@
 		3421857F1FE37F670037A48C /* MTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421857E1FE37F670037A48C /* MTNavigationController.m */; };
 		342185821FE37F830037A48C /* MTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185811FE37F830037A48C /* MTTabBar.m */; };
 		342185851FE37F950037A48C /* MTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185841FE37F950037A48C /* MTUser.m */; };
+		342185931FE3B41C0037A48C /* MTBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185921FE3B41C0037A48C /* MTBaseController.m */; };
+		342185961FE3B42C0037A48C /* MTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185951FE3B42C0037A48C /* MTBaseModel.m */; };
+		342185991FE3B4370037A48C /* MTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185981FE3B4370037A48C /* MTBaseView.m */; };
 		54940886778126DAF6FA484A /* libPods-MTShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7CC120350E645078F76770 /* libPods-MTShop.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,12 @@
 		3421858A1FE392E00037A48C /* MTShopAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTShopAPI.h; sourceTree = "<group>"; };
 		3421858B1FE392F20037A48C /* MTShopDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTShopDefine.h; sourceTree = "<group>"; };
 		3421858C1FE3934C0037A48C /* MTShopMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTShopMacro.h; sourceTree = "<group>"; };
+		342185911FE3B41C0037A48C /* MTBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBaseController.h; sourceTree = "<group>"; };
+		342185921FE3B41C0037A48C /* MTBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBaseController.m; sourceTree = "<group>"; };
+		342185941FE3B42C0037A48C /* MTBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBaseModel.h; sourceTree = "<group>"; };
+		342185951FE3B42C0037A48C /* MTBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBaseModel.m; sourceTree = "<group>"; };
+		342185971FE3B4370037A48C /* MTBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBaseView.h; sourceTree = "<group>"; };
+		342185981FE3B4370037A48C /* MTBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBaseView.m; sourceTree = "<group>"; };
 		84B9822701ABB0E2ECA8825B /* Pods-MTShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.release.xcconfig"; sourceTree = "<group>"; };
 		BD7CC120350E645078F76770 /* libPods-MTShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33BFE22354CC11FD39BCDF9 /* Pods-MTShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +159,7 @@
 		3421852E1FE37AF50037A48C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3421858D1FE3B4000037A48C /* Base */,
 				342185761FE37F300037A48C /* Main */,
 				3421852F1FE37AF50037A48C /* Home */,
 				3421853C1FE37D260037A48C /* NearBy */,
@@ -403,6 +413,43 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		3421858D1FE3B4000037A48C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3421858E1FE3B4000037A48C /* Controller */,
+				3421858F1FE3B4000037A48C /* Model */,
+				342185901FE3B4000037A48C /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3421858E1FE3B4000037A48C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				342185911FE3B41C0037A48C /* MTBaseController.h */,
+				342185921FE3B41C0037A48C /* MTBaseController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3421858F1FE3B4000037A48C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				342185941FE3B42C0037A48C /* MTBaseModel.h */,
+				342185951FE3B42C0037A48C /* MTBaseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		342185901FE3B4000037A48C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				342185971FE3B4370037A48C /* MTBaseView.h */,
+				342185981FE3B4370037A48C /* MTBaseView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4B1FB5032912255797EA1970 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,9 +590,12 @@
 				342185631FE37DE10037A48C /* MTPublishModel.m in Sources */,
 				342185751FE37E3C0037A48C /* MTMineView.m in Sources */,
 				342185661FE37DEB0037A48C /* MTMessageModel.m in Sources */,
+				342185961FE3B42C0037A48C /* MTBaseModel.m in Sources */,
 				342185691FE37DF90037A48C /* MTMineModel.m in Sources */,
+				342185991FE3B4370037A48C /* MTBaseView.m in Sources */,
 				3421852D1FE37AEE0037A48C /* AppDelegate.m in Sources */,
 				3421855A1FE37DB50037A48C /* MTMessageController.m in Sources */,
+				342185931FE3B41C0037A48C /* MTBaseController.m in Sources */,
 				3421856C1FE37E0D0037A48C /* MTNearbyView.m in Sources */,
 				3421857F1FE37F670037A48C /* MTNavigationController.m in Sources */,
 				3421857C1FE37F490037A48C /* MTTabBarController.m in Sources */,
