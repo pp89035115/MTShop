@@ -25,6 +25,10 @@
 		3421856F1FE37E230037A48C /* MTPubilshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421856E1FE37E230037A48C /* MTPubilshView.m */; };
 		342185721FE37E2C0037A48C /* MTMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185711FE37E2C0037A48C /* MTMessageView.m */; };
 		342185751FE37E3C0037A48C /* MTMineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185741FE37E3C0037A48C /* MTMineView.m */; };
+		3421857C1FE37F490037A48C /* MTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421857B1FE37F490037A48C /* MTTabBarController.m */; };
+		3421857F1FE37F670037A48C /* MTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421857E1FE37F670037A48C /* MTNavigationController.m */; };
+		342185821FE37F830037A48C /* MTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185811FE37F830037A48C /* MTTabBar.m */; };
+		342185851FE37F950037A48C /* MTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185841FE37F950037A48C /* MTUser.m */; };
 		54940886778126DAF6FA484A /* libPods-MTShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7CC120350E645078F76770 /* libPods-MTShop.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +69,14 @@
 		342185711FE37E2C0037A48C /* MTMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMessageView.m; sourceTree = "<group>"; };
 		342185731FE37E3C0037A48C /* MTMineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMineView.h; sourceTree = "<group>"; };
 		342185741FE37E3C0037A48C /* MTMineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMineView.m; sourceTree = "<group>"; };
+		3421857A1FE37F490037A48C /* MTTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTTabBarController.h; sourceTree = "<group>"; };
+		3421857B1FE37F490037A48C /* MTTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTTabBarController.m; sourceTree = "<group>"; };
+		3421857D1FE37F670037A48C /* MTNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNavigationController.h; sourceTree = "<group>"; };
+		3421857E1FE37F670037A48C /* MTNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNavigationController.m; sourceTree = "<group>"; };
+		342185801FE37F830037A48C /* MTTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTTabBar.h; sourceTree = "<group>"; };
+		342185811FE37F830037A48C /* MTTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTTabBar.m; sourceTree = "<group>"; };
+		342185831FE37F950037A48C /* MTUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTUser.h; sourceTree = "<group>"; };
+		342185841FE37F950037A48C /* MTUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTUser.m; sourceTree = "<group>"; };
 		84B9822701ABB0E2ECA8825B /* Pods-MTShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.release.xcconfig"; sourceTree = "<group>"; };
 		BD7CC120350E645078F76770 /* libPods-MTShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33BFE22354CC11FD39BCDF9 /* Pods-MTShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +145,7 @@
 		3421852E1FE37AF50037A48C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				342185761FE37F300037A48C /* Main */,
 				3421852F1FE37AF50037A48C /* Home */,
 				3421853C1FE37D260037A48C /* NearBy */,
 				342185441FE37D260037A48C /* Publish */,
@@ -327,6 +340,45 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		342185761FE37F300037A48C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				342185771FE37F300037A48C /* Controller */,
+				342185781FE37F300037A48C /* Model */,
+				342185791FE37F300037A48C /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		342185771FE37F300037A48C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3421857A1FE37F490037A48C /* MTTabBarController.h */,
+				3421857B1FE37F490037A48C /* MTTabBarController.m */,
+				3421857D1FE37F670037A48C /* MTNavigationController.h */,
+				3421857E1FE37F670037A48C /* MTNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		342185781FE37F300037A48C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				342185831FE37F950037A48C /* MTUser.h */,
+				342185841FE37F950037A48C /* MTUser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		342185791FE37F300037A48C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				342185801FE37F830037A48C /* MTTabBar.h */,
+				342185811FE37F830037A48C /* MTTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4B1FB5032912255797EA1970 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,10 +523,14 @@
 				3421852D1FE37AEE0037A48C /* AppDelegate.m in Sources */,
 				3421855A1FE37DB50037A48C /* MTMessageController.m in Sources */,
 				3421856C1FE37E0D0037A48C /* MTNearbyView.m in Sources */,
+				3421857F1FE37F670037A48C /* MTNavigationController.m in Sources */,
+				3421857C1FE37F490037A48C /* MTTabBarController.m in Sources */,
 				3421856F1FE37E230037A48C /* MTPubilshView.m in Sources */,
 				342185241FE375110037A48C /* main.m in Sources */,
 				342185351FE37B140037A48C /* MTHomeController.m in Sources */,
+				342185851FE37F950037A48C /* MTUser.m in Sources */,
 				342185601FE37DD40037A48C /* MTNearbyModel.m in Sources */,
+				342185821FE37F830037A48C /* MTTabBar.m in Sources */,
 				342185721FE37E2C0037A48C /* MTMessageView.m in Sources */,
 				3421855D1FE37DC70037A48C /* MTMineController.m in Sources */,
 				342185381FE37B230037A48C /* MTHomeModel.m in Sources */,
