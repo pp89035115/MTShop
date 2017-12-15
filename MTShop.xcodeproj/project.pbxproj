@@ -13,6 +13,18 @@
 		342185351FE37B140037A48C /* MTHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185341FE37B140037A48C /* MTHomeController.m */; };
 		342185381FE37B230037A48C /* MTHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185371FE37B230037A48C /* MTHomeModel.m */; };
 		3421853B1FE37B2E0037A48C /* MTHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421853A1FE37B2E0037A48C /* MTHomeView.m */; };
+		342185511FE37D7D0037A48C /* MTNearbyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185501FE37D7D0037A48C /* MTNearbyController.m */; };
+		342185571FE37DAA0037A48C /* MTPublishController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185561FE37DAA0037A48C /* MTPublishController.m */; };
+		3421855A1FE37DB50037A48C /* MTMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185591FE37DB50037A48C /* MTMessageController.m */; };
+		3421855D1FE37DC70037A48C /* MTMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421855C1FE37DC70037A48C /* MTMineController.m */; };
+		342185601FE37DD40037A48C /* MTNearbyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421855F1FE37DD40037A48C /* MTNearbyModel.m */; };
+		342185631FE37DE10037A48C /* MTPublishModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185621FE37DE10037A48C /* MTPublishModel.m */; };
+		342185661FE37DEB0037A48C /* MTMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185651FE37DEB0037A48C /* MTMessageModel.m */; };
+		342185691FE37DF90037A48C /* MTMineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185681FE37DF90037A48C /* MTMineModel.m */; };
+		3421856C1FE37E0D0037A48C /* MTNearbyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421856B1FE37E0D0037A48C /* MTNearbyView.m */; };
+		3421856F1FE37E230037A48C /* MTPubilshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421856E1FE37E230037A48C /* MTPubilshView.m */; };
+		342185721FE37E2C0037A48C /* MTMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185711FE37E2C0037A48C /* MTMessageView.m */; };
+		342185751FE37E3C0037A48C /* MTMineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185741FE37E3C0037A48C /* MTMineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +40,30 @@
 		342185371FE37B230037A48C /* MTHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeModel.m; sourceTree = "<group>"; };
 		342185391FE37B2E0037A48C /* MTHomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeView.h; sourceTree = "<group>"; };
 		3421853A1FE37B2E0037A48C /* MTHomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeView.m; sourceTree = "<group>"; };
+		3421854F1FE37D7D0037A48C /* MTNearbyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNearbyController.h; sourceTree = "<group>"; };
+		342185501FE37D7D0037A48C /* MTNearbyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNearbyController.m; sourceTree = "<group>"; };
+		342185551FE37DAA0037A48C /* MTPublishController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTPublishController.h; sourceTree = "<group>"; };
+		342185561FE37DAA0037A48C /* MTPublishController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTPublishController.m; sourceTree = "<group>"; };
+		342185581FE37DB50037A48C /* MTMessageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMessageController.h; sourceTree = "<group>"; };
+		342185591FE37DB50037A48C /* MTMessageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMessageController.m; sourceTree = "<group>"; };
+		3421855B1FE37DC70037A48C /* MTMineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMineController.h; sourceTree = "<group>"; };
+		3421855C1FE37DC70037A48C /* MTMineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMineController.m; sourceTree = "<group>"; };
+		3421855E1FE37DD40037A48C /* MTNearbyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNearbyModel.h; sourceTree = "<group>"; };
+		3421855F1FE37DD40037A48C /* MTNearbyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNearbyModel.m; sourceTree = "<group>"; };
+		342185611FE37DE10037A48C /* MTPublishModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTPublishModel.h; sourceTree = "<group>"; };
+		342185621FE37DE10037A48C /* MTPublishModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTPublishModel.m; sourceTree = "<group>"; };
+		342185641FE37DEB0037A48C /* MTMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMessageModel.h; sourceTree = "<group>"; };
+		342185651FE37DEB0037A48C /* MTMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMessageModel.m; sourceTree = "<group>"; };
+		342185671FE37DF90037A48C /* MTMineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMineModel.h; sourceTree = "<group>"; };
+		342185681FE37DF90037A48C /* MTMineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMineModel.m; sourceTree = "<group>"; };
+		3421856A1FE37E0D0037A48C /* MTNearbyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNearbyView.h; sourceTree = "<group>"; };
+		3421856B1FE37E0D0037A48C /* MTNearbyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNearbyView.m; sourceTree = "<group>"; };
+		3421856D1FE37E230037A48C /* MTPubilshView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTPubilshView.h; sourceTree = "<group>"; };
+		3421856E1FE37E230037A48C /* MTPubilshView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTPubilshView.m; sourceTree = "<group>"; };
+		342185701FE37E2C0037A48C /* MTMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMessageView.h; sourceTree = "<group>"; };
+		342185711FE37E2C0037A48C /* MTMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMessageView.m; sourceTree = "<group>"; };
+		342185731FE37E3C0037A48C /* MTMineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMineView.h; sourceTree = "<group>"; };
+		342185741FE37E3C0037A48C /* MTMineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMineView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +118,10 @@
 			isa = PBXGroup;
 			children = (
 				3421852F1FE37AF50037A48C /* Home */,
+				3421853C1FE37D260037A48C /* NearBy */,
+				342185441FE37D260037A48C /* Publish */,
+				342185401FE37D260037A48C /* Message */,
+				342185481FE37D260037A48C /* Mine */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -119,6 +159,154 @@
 			children = (
 				342185391FE37B2E0037A48C /* MTHomeView.h */,
 				3421853A1FE37B2E0037A48C /* MTHomeView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3421853C1FE37D260037A48C /* NearBy */ = {
+			isa = PBXGroup;
+			children = (
+				3421853D1FE37D260037A48C /* Controller */,
+				3421853E1FE37D260037A48C /* Model */,
+				3421853F1FE37D260037A48C /* View */,
+			);
+			path = NearBy;
+			sourceTree = "<group>";
+		};
+		3421853D1FE37D260037A48C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3421854F1FE37D7D0037A48C /* MTNearbyController.h */,
+				342185501FE37D7D0037A48C /* MTNearbyController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3421853E1FE37D260037A48C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3421855E1FE37DD40037A48C /* MTNearbyModel.h */,
+				3421855F1FE37DD40037A48C /* MTNearbyModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3421853F1FE37D260037A48C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3421856A1FE37E0D0037A48C /* MTNearbyView.h */,
+				3421856B1FE37E0D0037A48C /* MTNearbyView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		342185401FE37D260037A48C /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				342185411FE37D260037A48C /* Controller */,
+				342185421FE37D260037A48C /* Model */,
+				342185431FE37D260037A48C /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		342185411FE37D260037A48C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				342185581FE37DB50037A48C /* MTMessageController.h */,
+				342185591FE37DB50037A48C /* MTMessageController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		342185421FE37D260037A48C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				342185641FE37DEB0037A48C /* MTMessageModel.h */,
+				342185651FE37DEB0037A48C /* MTMessageModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		342185431FE37D260037A48C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				342185701FE37E2C0037A48C /* MTMessageView.h */,
+				342185711FE37E2C0037A48C /* MTMessageView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		342185441FE37D260037A48C /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				342185451FE37D260037A48C /* Controller */,
+				342185461FE37D260037A48C /* Model */,
+				342185471FE37D260037A48C /* View */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		342185451FE37D260037A48C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				342185551FE37DAA0037A48C /* MTPublishController.h */,
+				342185561FE37DAA0037A48C /* MTPublishController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		342185461FE37D260037A48C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				342185611FE37DE10037A48C /* MTPublishModel.h */,
+				342185621FE37DE10037A48C /* MTPublishModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		342185471FE37D260037A48C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3421856D1FE37E230037A48C /* MTPubilshView.h */,
+				3421856E1FE37E230037A48C /* MTPubilshView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		342185481FE37D260037A48C /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				342185491FE37D260037A48C /* Controller */,
+				3421854A1FE37D260037A48C /* Model */,
+				3421854B1FE37D260037A48C /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		342185491FE37D260037A48C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3421855B1FE37DC70037A48C /* MTMineController.h */,
+				3421855C1FE37DC70037A48C /* MTMineController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3421854A1FE37D260037A48C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				342185671FE37DF90037A48C /* MTMineModel.h */,
+				342185681FE37DF90037A48C /* MTMineModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3421854B1FE37D260037A48C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				342185731FE37E3C0037A48C /* MTMineView.h */,
+				342185741FE37E3C0037A48C /* MTMineView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,10 +381,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3421853B1FE37B2E0037A48C /* MTHomeView.m in Sources */,
+				342185631FE37DE10037A48C /* MTPublishModel.m in Sources */,
+				342185751FE37E3C0037A48C /* MTMineView.m in Sources */,
+				342185661FE37DEB0037A48C /* MTMessageModel.m in Sources */,
+				342185691FE37DF90037A48C /* MTMineModel.m in Sources */,
 				3421852D1FE37AEE0037A48C /* AppDelegate.m in Sources */,
+				3421855A1FE37DB50037A48C /* MTMessageController.m in Sources */,
+				3421856C1FE37E0D0037A48C /* MTNearbyView.m in Sources */,
+				3421856F1FE37E230037A48C /* MTPubilshView.m in Sources */,
 				342185241FE375110037A48C /* main.m in Sources */,
 				342185351FE37B140037A48C /* MTHomeController.m in Sources */,
+				342185601FE37DD40037A48C /* MTNearbyModel.m in Sources */,
+				342185721FE37E2C0037A48C /* MTMessageView.m in Sources */,
+				3421855D1FE37DC70037A48C /* MTMineController.m in Sources */,
 				342185381FE37B230037A48C /* MTHomeModel.m in Sources */,
+				342185571FE37DAA0037A48C /* MTPublishController.m in Sources */,
+				342185511FE37D7D0037A48C /* MTNearbyController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
