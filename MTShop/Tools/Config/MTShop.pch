@@ -1,0 +1,16 @@
+//
+//  MTShop.pch
+//  MTShop
+//
+//  Created by DQ_Yang on 2017/12/15.
+//  Copyright © 2017年 MT. All rights reserved.
+//
+
+#ifndef MTShop_pch
+#define MTShop_pch
+
+#import "MTShopAPI.h"
+#import "MTShopDefine.h"
+#import "MTShopMacro.h"
+
+#endif /* MTShop_pch */
