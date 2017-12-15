@@ -25,6 +25,7 @@
 		3421856F1FE37E230037A48C /* MTPubilshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421856E1FE37E230037A48C /* MTPubilshView.m */; };
 		342185721FE37E2C0037A48C /* MTMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185711FE37E2C0037A48C /* MTMessageView.m */; };
 		342185751FE37E3C0037A48C /* MTMineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185741FE37E3C0037A48C /* MTMineView.m */; };
+		54940886778126DAF6FA484A /* libPods-MTShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7CC120350E645078F76770 /* libPods-MTShop.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,9 @@
 		342185711FE37E2C0037A48C /* MTMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMessageView.m; sourceTree = "<group>"; };
 		342185731FE37E3C0037A48C /* MTMineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTMineView.h; sourceTree = "<group>"; };
 		342185741FE37E3C0037A48C /* MTMineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMineView.m; sourceTree = "<group>"; };
+		84B9822701ABB0E2ECA8825B /* Pods-MTShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.release.xcconfig"; sourceTree = "<group>"; };
+		BD7CC120350E645078F76770 /* libPods-MTShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33BFE22354CC11FD39BCDF9 /* Pods-MTShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,17 +75,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54940886778126DAF6FA484A /* libPods-MTShop.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0173EE272D1F13BABDF88116 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D33BFE22354CC11FD39BCDF9 /* Pods-MTShop.debug.xcconfig */,
+				84B9822701ABB0E2ECA8825B /* Pods-MTShop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		342185081FE375110037A48C = {
 			isa = PBXGroup;
 			children = (
 				342185131FE375110037A48C /* MTShop */,
 				342185121FE375110037A48C /* Products */,
+				0173EE272D1F13BABDF88116 /* Pods */,
+				4B1FB5032912255797EA1970 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -311,6 +327,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4B1FB5032912255797EA1970 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD7CC120350E645078F76770 /* libPods-MTShop.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,9 +342,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 342185271FE375110037A48C /* Build configuration list for PBXNativeTarget "MTShop" */;
 			buildPhases = (
+				CEC5E07C5CC5BABC7579449D /* [CP] Check Pods Manifest.lock */,
 				3421850D1FE375110037A48C /* Sources */,
 				3421850E1FE375110037A48C /* Frameworks */,
 				3421850F1FE375110037A48C /* Resources */,
+				36C8C6BDDC5DC9781CA99A17 /* [CP] Embed Pods Frameworks */,
+				DDDF3206CFBC4F9B9FAE24B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -374,6 +401,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36C8C6BDDC5DC9781CA99A17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTShop/Pods-MTShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEC5E07C5CC5BABC7579449D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MTShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDDF3206CFBC4F9B9FAE24B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MTShop/Pods-MTShop-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTShop/Pods-MTShop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3421850D1FE375110037A48C /* Sources */ = {
@@ -509,6 +592,7 @@
 		};
 		342185281FE375110037A48C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D33BFE22354CC11FD39BCDF9 /* Pods-MTShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -524,6 +608,7 @@
 		};
 		342185291FE375110037A48C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84B9822701ABB0E2ECA8825B /* Pods-MTShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

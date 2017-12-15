@@ -1,0 +1,1 @@
+../../../LPAutoScrollView/LPAutoScrollView/LPTimerWeakTarget.h
