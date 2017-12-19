@@ -17,4 +17,5 @@ target 'MTShop' do
 	pod 'SVProgressHUD'
 	pod 'Masonry'
 	pod 'MBProgressHUD'
+    pod 'zhPopupController'
 end
