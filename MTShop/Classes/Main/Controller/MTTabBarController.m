@@ -43,18 +43,23 @@
     [item setTitleTextAttributes:selectAttrs forState:UIControlStateSelected];
     
     MTHomeController *homeVc = [[MTHomeController alloc]init];
+    [self setupChildVc:homeVc WithTitle:@"首页" Image:@"tabBarHome" SelectImage:@"tabBarHome_h"];
     self.homeVc = homeVc;
     
     MTNearbyController *nearbyVc = [[MTNearbyController alloc]init];
+    [self setupChildVc:nearbyVc WithTitle:@"附近" Image:@"tabBarNearby" SelectImage:@"tabBarNearby_h"];
     self.nearbyVc = nearbyVc;
     
     MTPublishController *pubilshVc = [[MTPublishController alloc]init];
+    [self setupChildVc:pubilshVc WithTitle:@"发布" Image:@"tabBarPublish" SelectImage:@"tabBarPublish_h"];
     self.publishVc = pubilshVc;
     
     MTMessageController *messageVc = [[MTMessageController alloc]init];
+    [self setupChildVc:messageVc WithTitle:@"消息" Image:@"tabBarMessage" SelectImage:@"tabBarMessage_h"];
     self.messageVc =messageVc;
     
     MTMineController *mineVc = [[MTMineController alloc]init];
+    [self setupChildVc:mineVc WithTitle:@"我的" Image:@"tabBarMine" SelectImage:@"tabBarMine_h"];
     self.mineVc = mineVc;
 }
 
