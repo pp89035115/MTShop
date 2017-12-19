@@ -16,6 +16,8 @@
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, assign) CGSize size;
+@property (nonatomic) CGPoint origin;
+
 - (void) setCorner:(float) r;
 + (UIView *)createLineView:(UIView *)superView;
 + (UIView *)createLineView:(UIView *)superView frame:(CGRect)rect;

@@ -89,6 +89,16 @@
     return self.frame.size.height;
 }
 
+- (void)setOrigin:(CGPoint)origin {
+    CGRect frame = self.frame;
+    frame.origin = origin;
+    self.frame = frame;
+}
+
+- (CGPoint)origin {
+    return self.frame.origin;
+}
+
 - (void)setSize:(CGSize)size
 {
 //    self.width = size.width;

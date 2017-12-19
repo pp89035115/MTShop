@@ -99,6 +99,11 @@
 		3440B5641FE8FECC003DDC72 /* tabBarMessage_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3440B55A1FE8FECC003DDC72 /* tabBarMessage_h@2x.png */; };
 		3440B5651FE8FECC003DDC72 /* tabBarMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3440B55B1FE8FECC003DDC72 /* tabBarMine@2x.png */; };
 		3440B5661FE8FECC003DDC72 /* tabBarNearby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3440B55C1FE8FECC003DDC72 /* tabBarNearby@2x.png */; };
+		3440B56B1FE90B3C003DDC72 /* zhFullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440B56A1FE90B3C003DDC72 /* zhFullView.m */; };
+		3440B56E1FE90C62003DDC72 /* zhIconLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440B56D1FE90C62003DDC72 /* zhIconLabel.m */; };
+		3440B5711FE90DB8003DDC72 /* NSDate+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440B5701FE90DB8003DDC72 /* NSDate+Extend.m */; };
+		3440B5741FE90E15003DDC72 /* UIScreen+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440B5731FE90E15003DDC72 /* UIScreen+Extend.m */; };
+		3440B5771FE90E9D003DDC72 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440B5751FE90E9D003DDC72 /* UIView+Layout.m */; };
 		54940886778126DAF6FA484A /* libPods-MTShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7CC120350E645078F76770 /* libPods-MTShop.a */; };
 /* End PBXBuildFile section */
 
@@ -281,6 +286,16 @@
 		3440B55A1FE8FECC003DDC72 /* tabBarMessage_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarMessage_h@2x.png"; sourceTree = "<group>"; };
 		3440B55B1FE8FECC003DDC72 /* tabBarMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarMine@2x.png"; sourceTree = "<group>"; };
 		3440B55C1FE8FECC003DDC72 /* tabBarNearby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarNearby@2x.png"; sourceTree = "<group>"; };
+		3440B5691FE90B3C003DDC72 /* zhFullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zhFullView.h; sourceTree = "<group>"; };
+		3440B56A1FE90B3C003DDC72 /* zhFullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zhFullView.m; sourceTree = "<group>"; };
+		3440B56C1FE90C62003DDC72 /* zhIconLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zhIconLabel.h; sourceTree = "<group>"; };
+		3440B56D1FE90C62003DDC72 /* zhIconLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zhIconLabel.m; sourceTree = "<group>"; };
+		3440B56F1FE90DB8003DDC72 /* NSDate+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extend.h"; sourceTree = "<group>"; };
+		3440B5701FE90DB8003DDC72 /* NSDate+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extend.m"; sourceTree = "<group>"; };
+		3440B5721FE90E14003DDC72 /* UIScreen+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Extend.h"; sourceTree = "<group>"; };
+		3440B5731FE90E15003DDC72 /* UIScreen+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Extend.m"; sourceTree = "<group>"; };
+		3440B5751FE90E9D003DDC72 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		3440B5761FE90E9D003DDC72 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		84B9822701ABB0E2ECA8825B /* Pods-MTShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.release.xcconfig"; sourceTree = "<group>"; };
 		BD7CC120350E645078F76770 /* libPods-MTShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33BFE22354CC11FD39BCDF9 /* Pods-MTShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -589,6 +604,7 @@
 		342185861FE38F410037A48C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				3440B5681FE90B3C003DDC72 /* Lib */,
 				3421859E1FE3B5C80037A48C /* Category */,
 				342185871FE392410037A48C /* Config */,
 			);
@@ -648,6 +664,12 @@
 		3421859E1FE3B5C80037A48C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				3440B5761FE90E9D003DDC72 /* UIView+Layout.h */,
+				3440B5751FE90E9D003DDC72 /* UIView+Layout.m */,
+				3440B5721FE90E14003DDC72 /* UIScreen+Extend.h */,
+				3440B5731FE90E15003DDC72 /* UIScreen+Extend.m */,
+				3440B56F1FE90DB8003DDC72 /* NSDate+Extend.h */,
+				3440B5701FE90DB8003DDC72 /* NSDate+Extend.m */,
 				3421859F1FE3B5C80037A48C /* NSDate+XMGExtension.h */,
 				342185A01FE3B5C80037A48C /* NSDate+XMGExtension.m */,
 				342185A11FE3B5C80037A48C /* NSDictionary+BHExtension.h */,
@@ -795,6 +817,17 @@
 				3440B5551FE8FECB003DDC72 /* tabBarPublish@2x.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		3440B5681FE90B3C003DDC72 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				3440B56C1FE90C62003DDC72 /* zhIconLabel.h */,
+				3440B56D1FE90C62003DDC72 /* zhIconLabel.m */,
+				3440B5691FE90B3C003DDC72 /* zhFullView.h */,
+				3440B56A1FE90B3C003DDC72 /* zhFullView.m */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		4B1FB5032912255797EA1970 /* Frameworks */ = {
@@ -969,6 +1002,7 @@
 				3421852D1FE37AEE0037A48C /* AppDelegate.m in Sources */,
 				342186481FE3B5C80037A48C /* UIViewController+LeftBarButton.m in Sources */,
 				342186211FE3B5C80037A48C /* UIImage+FileName.m in Sources */,
+				3440B5741FE90E15003DDC72 /* UIScreen+Extend.m in Sources */,
 				3421855A1FE37DB50037A48C /* MTMessageController.m in Sources */,
 				3421863A1FE3B5C80037A48C /* UIView+FDCollapsibleConstraints.m in Sources */,
 				3421863C1FE3B5C80037A48C /* UIView+Frame.m in Sources */,
@@ -980,12 +1014,15 @@
 				3421862E1FE3B5C80037A48C /* UIKitExtend.m in Sources */,
 				3421856C1FE37E0D0037A48C /* MTNearbyView.m in Sources */,
 				342186201FE3B5C80037A48C /* UIImage+Color.m in Sources */,
+				3440B56B1FE90B3C003DDC72 /* zhFullView.m in Sources */,
 				342186411FE3B5C80037A48C /* UIView+Shake.m in Sources */,
 				342186341FE3B5C80037A48C /* UIView+Animation.m in Sources */,
 				3421863E1FE3B5C80037A48C /* UIView+Nib.m in Sources */,
 				3421861D1FE3B5C80037A48C /* UIImage+BetterFace.m in Sources */,
 				3421857F1FE37F670037A48C /* MTNavigationController.m in Sources */,
 				3421857C1FE37F490037A48C /* MTTabBarController.m in Sources */,
+				3440B5711FE90DB8003DDC72 /* NSDate+Extend.m in Sources */,
+				3440B5771FE90E9D003DDC72 /* UIView+Layout.m in Sources */,
 				342186161FE3B5C80037A48C /* UIBarButtonItem+MJ.m in Sources */,
 				3421863D1FE3B5C80037A48C /* UIView+GestureCallback.m in Sources */,
 				342186231FE3B5C80037A48C /* UIImage+GIF.m in Sources */,
@@ -1018,6 +1055,7 @@
 				3421855D1FE37DC70037A48C /* MTMineController.m in Sources */,
 				342186461FE3B5C80037A48C /* UIViewController+BHExtension.m in Sources */,
 				342186261FE3B5C80037A48C /* UIImage+PDF.m in Sources */,
+				3440B56E1FE90C62003DDC72 /* zhIconLabel.m in Sources */,
 				342186321FE3B5C80037A48C /* UITabBar+BHBadge.m in Sources */,
 				342185381FE37B230037A48C /* MTHomeModel.m in Sources */,
 				342186311FE3B5C80037A48C /* UITabBar+bageValue.m in Sources */,

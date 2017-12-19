@@ -41,6 +41,7 @@ PODS:
   - YYWebImage (1.0.5):
     - YYCache
     - YYImage
+  - zhPopupController (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -60,6 +61,7 @@ DEPENDENCIES:
   - YYModel
   - YYText
   - YYWebImage
+  - zhPopupController
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -79,7 +81,8 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
+  zhPopupController: 411af38e63764130e4ae4ba5cde12c776dc84824
 
-PODFILE CHECKSUM: f69dddd0257e0989f10f754e1358b14a7b2b4d6d
+PODFILE CHECKSUM: c8a4527f5b79007b67958235612ac9819e286b65
 
 COCOAPODS: 1.4.0.beta.2

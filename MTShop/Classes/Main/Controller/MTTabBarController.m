@@ -9,8 +9,14 @@
 #import "MTTabBarController.h"
 #import "MTNavigationController.h"
 #import "MTTabBar.h"
-
+#import <zhPopupController/zhPopupController.h>
+#import "zhFullView.h"
+#import "zhIconLabel.h"
 @interface MTTabBarController ()
+<
+    UITabBarControllerDelegate,
+    zhPopupControllerDelegate
+>
 @property (nonatomic ,strong)MTHomeController *homeVc;
 @property (nonatomic ,strong)MTNearbyController *nearbyVc;
 @property (nonatomic ,strong)MTPublishController *publishVc;
@@ -22,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.delegate = self;
     [self setupSubViews];
 }
 
@@ -52,6 +59,7 @@
     
     MTPublishController *pubilshVc = [[MTPublishController alloc]init];
     [self setupChildVc:pubilshVc WithTitle:@"发布" Image:@"tabBarPublish" SelectImage:@"tabBarPublish_h"];
+    pubilshVc.tabBarItem.tag = 2;
     self.publishVc = pubilshVc;
     
     MTMessageController *messageVc = [[MTMessageController alloc]init];
@@ -80,6 +88,70 @@
     seleImage = [seleImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     controller.tabBarItem.selectedImage = seleImage;
     [self addChildViewController:nav];
+}
+
+#pragma mark - <UITabBarControllerDelegate>
+//- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+//{
+//    LHFUNCTION
+//    NSLog(@"++++ tabbarTag: %ld ",(long)item.tag);
+//
+//    if (item.tag == 2) {
+//        return;
+//    }
+//}
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    if (viewController.tabBarItem.tag == 2) {
+        
+        
+        [self presentPublish];
+        return NO;
+    }else
+    {
+        return YES;
+    }
+}
+
+- (void)presentPublish
+{
+
+    zhFullView *full = [self fullView];
+    full.didClickFullView = ^(zhFullView * _Nonnull fullView) {
+        [self.zh_popupController dismiss];
+    };
+    
+    full.didClickItems = ^(zhFullView *fullView, NSInteger index) {
+        
+        __weak typeof(self) weak_self = self;
+        self.zh_popupController.didDismiss = ^(zhPopupController * _Nonnull popupController) {
+            LHFUNCTION
+        };
+        
+        [fullView endAnimationsCompletion:^(zhFullView *fullView) {
+            [self.zh_popupController dismiss];
+        }];
+    };
+    
+    self.zh_popupController = [zhPopupController popupControllerWithMaskType:zhPopupMaskTypeWhiteBlur];
+    self.zh_popupController.allowPan = YES;
+    [self.zh_popupController presentContentView:full];
+}
+
+- (zhFullView *)fullView {
+    
+    zhFullView *fullView = [[zhFullView alloc] initWithFrame:self.view.frame];
+    NSArray *array = @[@"文字", @"照片视频", @"头条文章", @"红包", @"直播", @"点评", @"好友圈", @"更多", @"音乐", @"商品", @"签到", @"秒拍", @"头条文章", @"红包", @"直播", @"点评"];
+    NSMutableArray *models = [NSMutableArray arrayWithCapacity:array.count];
+    for (NSString *string in array) {
+        zhIconLabelModel *item = [zhIconLabelModel new];
+        item.icon = [UIImage imageNamed:[NSString stringWithFormat:@"sina_%@", string]];
+        item.text = string;
+        [models addObject:item];
+    }
+    fullView.models = models;
+    return fullView;
 }
 
 @end
