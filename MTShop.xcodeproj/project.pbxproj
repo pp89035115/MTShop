@@ -104,6 +104,7 @@
 		3440B5711FE90DB8003DDC72 /* NSDate+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440B5701FE90DB8003DDC72 /* NSDate+Extend.m */; };
 		3440B5741FE90E15003DDC72 /* UIScreen+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440B5731FE90E15003DDC72 /* UIScreen+Extend.m */; };
 		3440B5771FE90E9D003DDC72 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440B5751FE90E9D003DDC72 /* UIView+Layout.m */; };
+		34D71D531FEB5E99004D5466 /* sina_关闭.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D71D521FEB5E99004D5466 /* sina_关闭.png */; };
 		54940886778126DAF6FA484A /* libPods-MTShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7CC120350E645078F76770 /* libPods-MTShop.a */; };
 /* End PBXBuildFile section */
 
@@ -296,6 +297,7 @@
 		3440B5731FE90E15003DDC72 /* UIScreen+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Extend.m"; sourceTree = "<group>"; };
 		3440B5751FE90E9D003DDC72 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		3440B5761FE90E9D003DDC72 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		34D71D521FEB5E99004D5466 /* sina_关闭.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sina_关闭.png"; sourceTree = "<group>"; };
 		84B9822701ABB0E2ECA8825B /* Pods-MTShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.release.xcconfig"; sourceTree = "<group>"; };
 		BD7CC120350E645078F76770 /* libPods-MTShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33BFE22354CC11FD39BCDF9 /* Pods-MTShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -805,6 +807,7 @@
 		3440B5521FE8FE52003DDC72 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				34D71D521FEB5E99004D5466 /* sina_关闭.png */,
 				3440B5571FE8FECB003DDC72 /* tabBarHome_h@2x.png */,
 				3440B5541FE8FECB003DDC72 /* tabBarHome@2x.png */,
 				3440B55A1FE8FECC003DDC72 /* tabBarMessage_h@2x.png */,
@@ -907,6 +910,7 @@
 				3440B55D1FE8FECC003DDC72 /* tabBarPublish_h@2x.png in Resources */,
 				3440B5601FE8FECC003DDC72 /* tabBarMessage@2x.png in Resources */,
 				3440B5651FE8FECC003DDC72 /* tabBarMine@2x.png in Resources */,
+				34D71D531FEB5E99004D5466 /* sina_关闭.png in Resources */,
 				3440B55E1FE8FECC003DDC72 /* tabBarHome@2x.png in Resources */,
 				3440B5641FE8FECC003DDC72 /* tabBarMessage_h@2x.png in Resources */,
 				3440B5661FE8FECC003DDC72 /* tabBarNearby@2x.png in Resources */,

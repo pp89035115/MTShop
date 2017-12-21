@@ -42,6 +42,7 @@
     //设置tabbar按钮点击样式
     NSMutableDictionary *selectAttrs = [NSMutableDictionary dictionary];
     selectAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:11];
+    
     selectAttrs[NSForegroundColorAttributeName] = MTMainColor;
     
     //更换tabbar样式
@@ -105,7 +106,6 @@
 {
     if (viewController.tabBarItem.tag == 2) {
         
-        
         [self presentPublish];
         return NO;
     }else
@@ -117,7 +117,6 @@
 //跳转到发布
 - (void)presentPublish
 {
-
     zhFullView *full = [self fullView];
     full.didClickFullView = ^(zhFullView * _Nonnull fullView) {
         [self.zh_popupController dismiss];
@@ -131,7 +130,7 @@
         };
         
         [fullView endAnimationsCompletion:^(zhFullView *fullView) {
-            [self.zh_popupController dismiss];
+            [weak_self.zh_popupController dismiss];
         }];
     };
     
@@ -143,7 +142,7 @@
 - (zhFullView *)fullView {
     
     zhFullView *fullView = [[zhFullView alloc] initWithFrame:self.view.frame];
-    NSArray *array = @[@"文字", @"照片视频", @"头条文章", @"红包", @"直播", @"点评", @"好友圈", @"更多", @"音乐", @"商品", @"签到", @"秒拍", @"头条文章", @"红包", @"直播", @"点评"];
+    NSArray *array = @[@"长期主营销售产品",@"长期主营采购产品",@"现货实时销售",@"现货实时采购"];
     NSMutableArray *models = [NSMutableArray arrayWithCapacity:array.count];
     for (NSString *string in array) {
         zhIconLabelModel *item = [zhIconLabelModel new];

@@ -12,9 +12,9 @@
 #import "UIColor+Extension.h"
 #import "NSDate+Extend.h"
 #import "UIScreen+Extend.h"
-#define ROW_COUNT 4 // 每行显示4个
+#define ROW_COUNT 2 // 每行显示4个
 #define ROWS 2      // 每页显示2行
-#define PAGES 2     // 共2页
+#define PAGES 1     // 共1页
 
 @interface zhFullView : UIView
 

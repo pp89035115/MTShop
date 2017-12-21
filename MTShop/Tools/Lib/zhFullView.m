@@ -77,7 +77,7 @@
     _weekLabel.x = _dateLabel.right + 10;
     _weekLabel.centerY = _dateLabel.centerY;
 
-    _closeButton.size = CGSizeMake([UIScreen width], 44);
+    _closeButton.size = CGSizeMake([UIScreen width], kScreenTabBarHeight);
     _closeButton.bottom = [UIScreen height];
     _closeIcon.size = CGSizeMake(30, 30);
     _closeIcon.center = _closeButton.center;
