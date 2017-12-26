@@ -44,7 +44,7 @@
         [self addSubview:_weekLabel];
         
         _closeButton = [UIButton new];
-        _closeButton.backgroundColor = [UIColor whiteColor];
+        _closeButton.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:.5];
         _closeButton.userInteractionEnabled = NO;
         [_closeButton addTarget:self action:@selector(closeClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_closeButton];
@@ -150,13 +150,14 @@
 }
 
 - (void)itemClicked:(UITapGestureRecognizer *)recognizer  {
-    if (ROWS * ROW_COUNT - 1 == recognizer.view.tag) {
-        [_scrollContainer setContentOffset:CGPointMake([UIScreen width], 0) animated:YES];
-    } else {
+    
+//    if (ROWS * ROW_COUNT - 1 == recognizer.view.tag) {
+//        [_scrollContainer setContentOffset:CGPointMake([UIScreen width], 0) animated:YES];
+//    } else {
         if (nil != self.didClickItems) {
             self.didClickItems(self, recognizer.view.tag);
         }
-    }
+//    }
 }
 
 - (void)closeClicked:(UIButton *)sender {

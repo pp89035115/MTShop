@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D172C75D22C2B0917462EFA101CBA8B9'
+               BlueprintIdentifier = '2BFD70A6B0F5CB3779E443034C1CEF25'
                BlueprintName = 'Pods-MTShop'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-MTShop.a'>

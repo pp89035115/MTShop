@@ -124,8 +124,11 @@
     
     full.didClickItems = ^(zhFullView *fullView, NSInteger index) {
         
+        NSLog(@"++++ index: %ld ",index);
         __weak typeof(self) weak_self = self;
         self.zh_popupController.didDismiss = ^(zhPopupController * _Nonnull popupController) {
+            
+            
             LHFUNCTION
         };
         
@@ -142,7 +145,7 @@
 - (zhFullView *)fullView {
     
     zhFullView *fullView = [[zhFullView alloc] initWithFrame:self.view.frame];
-    NSArray *array = @[@"长期主营销售产品",@"长期主营采购产品",@"现货实时销售",@"现货实时采购"];
+    NSArray *array = @[@"长期主营销售产品",@"长期主营采购产品",@"现货实时销售",@"现货实时采购",@""];
     NSMutableArray *models = [NSMutableArray arrayWithCapacity:array.count];
     for (NSString *string in array) {
         zhIconLabelModel *item = [zhIconLabelModel new];
