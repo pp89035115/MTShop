@@ -17,5 +17,7 @@ target 'MTShop' do
 	pod 'SVProgressHUD'
 	pod 'Masonry'
 	pod 'MBProgressHUD'
-    pod 'zhPopupController'
+   	pod 'zhPopupController'
+	pod 'GQGesVCTransition'
+    	pod 'ZJAnimationPopView'
 end
