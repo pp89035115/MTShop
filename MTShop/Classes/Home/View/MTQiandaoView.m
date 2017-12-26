@@ -39,6 +39,7 @@
         _qiandaoButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _qiandaoButton.backgroundColor = MTMainColor;
         [_qiandaoButton setTitle:@"签到" forState:UIControlStateNormal];
+        [_qiandaoButton addTarget:self action:@selector(qiandaoAction) forControlEvents:UIControlEventTouchUpInside];
     }return _qiandaoButton;
 }
 - (UILabel *)childLabel
@@ -57,6 +58,8 @@
         _qiandaoGuizeButton.titleLabel.font = Font(14);
         [_qiandaoGuizeButton setTitle:@"签到规则" forState:UIControlStateNormal];
         [_qiandaoGuizeButton setTitleColor:MTMainColor forState:UIControlStateNormal];
+        [_qiandaoGuizeButton addTarget:self action:@selector(qiandaoguizeAction) forControlEvents:UIControlEventTouchUpInside];
+
     }return _qiandaoGuizeButton;
 }
 
@@ -98,6 +101,20 @@
         _mucaibiLabel.text = @"0";
         _mucaibiLabel.textAlignment = NSTextAlignmentCenter;
     }return _mucaibiLabel;
+}
+
+#pragma mark - buttonAction
+- (void)qiandaoAction
+{
+    if (self.qiandaoButtonActionBlock) {
+        self.qiandaoButtonActionBlock(self);
+    }
+}
+- (void)qiandaoguizeAction
+{
+    if (self.qiandaoGuizeActionBlock) {
+        self.qiandaoGuizeActionBlock(self);
+    }
 }
 
 //

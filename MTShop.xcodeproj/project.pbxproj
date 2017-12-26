@@ -111,6 +111,7 @@
 		3458F3F01FF2284100A73137 /* home_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3458F3EF1FF2284100A73137 /* home_search@2x.png */; };
 		3458F3F31FF22D3300A73137 /* zhOverflyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3458F3F11FF22D3300A73137 /* zhOverflyView.m */; };
 		3458F3F61FF2324D00A73137 /* MTQiandaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3458F3F51FF2324D00A73137 /* MTQiandaoView.m */; };
+		3458F3F91FF259EA00A73137 /* MTHomeZujiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3458F3F81FF259EA00A73137 /* MTHomeZujiCell.m */; };
 		34D71D531FEB5E99004D5466 /* sina_关闭.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D71D521FEB5E99004D5466 /* sina_关闭.png */; };
 		54940886778126DAF6FA484A /* libPods-MTShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7CC120350E645078F76770 /* libPods-MTShop.a */; };
 /* End PBXBuildFile section */
@@ -315,6 +316,8 @@
 		3458F3F21FF22D3300A73137 /* zhOverflyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zhOverflyView.h; sourceTree = "<group>"; };
 		3458F3F41FF2324D00A73137 /* MTQiandaoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTQiandaoView.h; sourceTree = "<group>"; };
 		3458F3F51FF2324D00A73137 /* MTQiandaoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTQiandaoView.m; sourceTree = "<group>"; };
+		3458F3F71FF259EA00A73137 /* MTHomeZujiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeZujiCell.h; sourceTree = "<group>"; };
+		3458F3F81FF259EA00A73137 /* MTHomeZujiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeZujiCell.m; sourceTree = "<group>"; };
 		34D71D521FEB5E99004D5466 /* sina_关闭.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sina_关闭.png"; sourceTree = "<group>"; };
 		84B9822701ABB0E2ECA8825B /* Pods-MTShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.release.xcconfig"; sourceTree = "<group>"; };
 		BD7CC120350E645078F76770 /* libPods-MTShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -436,6 +439,8 @@
 				3421853A1FE37B2E0037A48C /* MTHomeView.m */,
 				3458F3F41FF2324D00A73137 /* MTQiandaoView.h */,
 				3458F3F51FF2324D00A73137 /* MTQiandaoView.m */,
+				3458F3F71FF259EA00A73137 /* MTHomeZujiCell.h */,
+				3458F3F81FF259EA00A73137 /* MTHomeZujiCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1056,6 +1061,7 @@
 				342186471FE3B5C80037A48C /* UIViewController+Extension.m in Sources */,
 				342185931FE3B41C0037A48C /* MTBaseController.m in Sources */,
 				342186351FE3B5C80037A48C /* UIView+BlockGesture.m in Sources */,
+				3458F3F91FF259EA00A73137 /* MTHomeZujiCell.m in Sources */,
 				342186141FE3B5C80037A48C /* NSString+Extension.m in Sources */,
 				3421862A1FE3B5C80037A48C /* UIImage+Vector.m in Sources */,
 				3421862E1FE3B5C80037A48C /* UIKitExtend.m in Sources */,

@@ -21,6 +21,7 @@ MTHomeTopViewDelegate
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)MTHomeTopView *topView;
 @property (nonatomic ,strong)MTQiandaoView *qiandaoView;
+@property (nonatomic ,strong)ZJAnimationPopView *popView;
 @end
 
 @implementation MTHomeController
@@ -97,37 +98,29 @@ MTHomeTopViewDelegate
 - (void)showQiandaoCard
 {
     ZJAnimationPopView *popView = [[ZJAnimationPopView alloc] initWithCustomView:self.qiandaoView popStyle:3 dismissStyle:3];
-    // 2.设置属性，可不设置使用默认值，见注解
-    // 2.1 显示时点击背景是否移除弹框
     popView.isClickBGDismiss = YES;
-    // 2.2 显示时背景的透明度
     popView.popBGAlpha = 0.5f;
-    // 2.3 显示时是否监听屏幕旋转
     popView.isObserverOrientationChange = YES;
-    // 2.4 显示时动画时长
-    //    popView.popAnimationDuration = 0.8f;
-    // 2.5 移除时动画时长
-    //    popView.dismissAnimationDuration = 0.8f;
-    
-    // 2.6 显示完成回调
     popView.popComplete = ^{
         NSLog(@"显示完成");
     };
-    // 2.7 移除完成回调
     popView.dismissComplete = ^{
         NSLog(@"移除完成");
     };
-    
-    // 3.处理自定义视图操作事件
     [self handleCustomActionEnvent:popView];
-    
-    // 4.显示弹框
     [popView pop];
+    self.popView = popView;
 }
 
+#pragma mark - qiandaoView回调方法
 - (void)handleCustomActionEnvent:(ZJAnimationPopView *)popView
 {
-    
+    self.qiandaoView.qiandaoButtonActionBlock = ^(MTQiandaoView *qiandaoView) {
+        [popView dismiss];
+    };
+    self.qiandaoView.qiandaoGuizeActionBlock = ^(MTQiandaoView *qiandaoView) {
+        [popView dismiss];
+    };
 }
 
 #pragma mark - setupTableView

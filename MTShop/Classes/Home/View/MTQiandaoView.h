@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class MTQiandaoView;
+
 @interface MTQiandaoView : UIView
 
-@property (nonatomic, copy) void(^canceSureActionBlock)(BOOL isSure);
+@property (nonatomic, copy) void(^qiandaoButtonActionBlock)(MTQiandaoView *qiandaoView);
+@property (nonatomic, copy) void(^qiandaoGuizeActionBlock)(MTQiandaoView *qiandaoView);
 
 @end
