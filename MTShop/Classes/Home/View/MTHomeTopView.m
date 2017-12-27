@@ -91,6 +91,8 @@
     self.bgImageView.layer.cornerRadius = 3.f;
     self.bgImageView.layer.masksToBounds = YES;
     self.cityButton.frame = CGRectMake(padding, padding + 5, button_width, button_height);
+    [self.cityButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -self.cityButton.imageView.size.width, 0, self.cityButton.imageView.size.width)];
+    [self.cityButton setImageEdgeInsets:UIEdgeInsetsMake(0, self.cityButton.titleLabel.bounds.size.width, 0, -self.cityButton.titleLabel.bounds.size.width)];
     self.searchButton.frame = CGRectMake(CGRectGetMaxX(self.cityButton.frame), padding + 5, self.width - button_width * 2 , button_height);
     self.qianDaoButton.frame = CGRectMake(CGRectGetMaxX(self.searchButton.frame), padding + 5, button_width, button_height);
 }

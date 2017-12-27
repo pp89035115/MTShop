@@ -12,6 +12,8 @@
 #import "ZJAnimationPopView.h"
 #import "MTQiandaoView.h"
 
+#import "MTHomeZujiCell.h"
+
 @interface MTHomeController ()
 <
 UITableViewDelegate,
@@ -146,17 +148,33 @@ MTHomeTopViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    if (section == 0) {
+        return 1;
+    }else
+    {
+        return 3;
+    }
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return gScreenHeight / 10;
+    if (indexPath.section == 0) {
+        return [MTHomeZujiCell getCellHeight];
+    }else
+    {
+        return gScreenHeight / 10;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 10;
+    if (section == 0 || section == 1) {
+        return 0;
+    }else
+    {
+        return 10;
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -166,9 +184,16 @@ MTHomeTopViewDelegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MTBaseTableViewCell *cell = [MTBaseTableViewCell cellWithTableView:tableView];
-    cell.backgroundColor = LHRandomColor;
-    return cell;
+    if (indexPath.section  == 0) {
+        MTHomeZujiCell *cell = [MTHomeZujiCell cellWithTableView:tableView];
+        return cell;
+    }else
+    {
+        MTBaseTableViewCell *cell = [MTBaseTableViewCell cellWithTableView:tableView];
+        cell.backgroundColor = LHRandomColor;
+        return cell;
+    }
+
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

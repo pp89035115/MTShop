@@ -92,15 +92,6 @@
 }
 
 #pragma mark - <UITabBarControllerDelegate>
-//- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-//{
-//    LHFUNCTION
-//    NSLog(@"++++ tabbarTag: %ld ",(long)item.tag);
-//
-//    if (item.tag == 2) {
-//        return;
-//    }
-//}
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
