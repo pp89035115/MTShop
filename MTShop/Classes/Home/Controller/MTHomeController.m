@@ -13,18 +13,30 @@
 #import "MTQiandaoView.h"
 
 #import "MTHomeZujiCell.h"
+#import "MTHomeBannerCell.h"
+
+#import "MTHomePinpaiTitleView.h"
 
 @interface MTHomeController ()
 <
-UITableViewDelegate,
-UITableViewDataSource,
+UICollectionViewDelegate,
+UICollectionViewDataSource,
 MTHomeTopViewDelegate
 >
-@property (nonatomic ,strong)UITableView *tableView;
+@property (nonatomic ,strong)UICollectionView *collectionView;
+@property (nonatomic ,strong)UICollectionViewFlowLayout *layout;
 @property (nonatomic ,strong)MTHomeTopView *topView;
 @property (nonatomic ,strong)MTQiandaoView *qiandaoView;
 @property (nonatomic ,strong)ZJAnimationPopView *popView;
 @end
+
+/*cell*/
+static NSString *const MTHomeZujiCellId = @"MTHomeZujiCell";
+static NSString *const MTHomeBannerCellId = @"MTHomeBannerCell";
+/*headView*/
+static NSString *const MTHomePinPaiTitleViewId = @"MTHomePinPaiTitleView";
+
+
 
 @implementation MTHomeController
 
@@ -44,6 +56,7 @@ MTHomeTopViewDelegate
 
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     [self setupSubViews];
 }
@@ -52,7 +65,8 @@ MTHomeTopViewDelegate
 - (void)setupSubViews
 {
     [self setupNavigation];
-    [self.view addSubview:self.tableView];
+    [self registerCollectionViewCell];
+    [self.view addSubview:self.collectionView];
 }
 
 #pragma mark - setupNavigation
@@ -125,83 +139,128 @@ MTHomeTopViewDelegate
     };
 }
 
-#pragma mark - setupTableView
-- (UITableView *)tableView
+#pragma mark - setupCollectionView
+
+- (UICollectionView *)collectionView
 {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.topView.frame), gScreenWidth, gScreenHeight - 100) style:UITableViewStylePlain];
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-        _tableView.showsVerticalScrollIndicator= NO;
-        _tableView.showsHorizontalScrollIndicator = NO;
-        [_tableView setSeparatorColor: LHColor(229, 230, 231)];
-        _tableView.tableFooterView = [[UIView alloc]init];
-    }return _tableView;
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, self.topView.height, gScreenWidth, gScreenHeight - self.topView.height) collectionViewLayout:layout];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.showsVerticalScrollIndicator = NO;
+        _collectionView.backgroundColor = LHSeperatorColor;
+    }return _collectionView;
 }
 
-
-#pragma mark - <UITableViewDelegate,UITableViewDataSource>
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+#pragma mark - registerCollectionViewCell
+- (void)registerCollectionViewCell
 {
-    return 3;
+    [self.collectionView registerClass:[MTHomeZujiCell class] forCellWithReuseIdentifier:MTHomeZujiCellId];
+    [self.collectionView registerClass:[MTHomeBannerCell class] forCellWithReuseIdentifier:MTHomeBannerCellId];
+    
+    [self.collectionView registerClass:[MTHomePinpaiTitleView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomePinPaiTitleViewId];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    if (section == 0) {
+#pragma mark - <UICollectionViewDelegate,UICollectionViewDataSource>
+- (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 7;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    if (section == 0 || section == 1) {
         return 1;
     }else
     {
-        return 3;
-    }
-    
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == 0) {
-        return [MTHomeZujiCell getCellHeight];
-    }else
-    {
-        return gScreenHeight / 10;
-    }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    if (section == 0 || section == 1) {
         return 0;
-    }else
-    {
-        return 10;
     }
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    return [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 10)];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section  == 0) {
-        MTHomeZujiCell *cell = [MTHomeZujiCell cellWithTableView:tableView];
-        return cell;
-    }else
-    {
-        MTBaseTableViewCell *cell = [MTBaseTableViewCell cellWithTableView:tableView];
-        cell.backgroundColor = LHRandomColor;
-        return cell;
-    }
-
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self.navigationController pushViewController:[[MTCityListController alloc]init] animated:YES];
 }
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *tempCell = nil;
+    if (indexPath.section == 0) {
+        MTHomeZujiCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTHomeZujiCellId forIndexPath:indexPath];
+        cell.backgroundColor = [UIColor whiteColor];
+        tempCell = cell;
+    }else if (indexPath.section == 1)
+    {
+        MTHomeBannerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTHomeBannerCellId forIndexPath:indexPath];
+        cell.backgroundColor = LHRandomColor;
+        tempCell = cell;
+    }else
+    {
+        
+    }
+    return tempCell;
+}
+
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionReusableView *reusableview = nil;
+    if (kind == UICollectionElementKindSectionHeader){
+        if (indexPath.section == 2) {
+            MTHomePinpaiTitleView *pinpaiTitleView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomePinPaiTitleViewId forIndexPath:indexPath];
+            reusableview = pinpaiTitleView;
+        }
+    }
+    if (kind == UICollectionElementKindSectionFooter) {
+        
+    }
+    
+    return reusableview;
+}
+
+#pragma mark - item宽高
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return CGSizeMake(gScreenWidth, 30);
+    }else if (indexPath.section == 1)
+    {
+        return CGSizeMake(gScreenWidth, gScreenWidth / 1.5);
+    }
+    return CGSizeZero;
+}
+
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewLayoutAttributes *layoutAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+    if (indexPath.section == 4) {
+        
+    }
+    return layoutAttributes;
+}
+
+#pragma mark - head宽高
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    
+    if (section == 2) {
+        return CGSizeMake(gScreenWidth, 40);
+    }
+    
+    return CGSizeZero;
+}
+
+#pragma mark - foot宽高
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    
+    return CGSizeZero;
+}
+
+#pragma mark - <UICollectionViewDelegateFlowLayout>
+#pragma mark - X间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return (section == 5) ? 4 : 0;
+}
+#pragma mark - Y间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return (section == 5) ? 4 : 0;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
 
 
 

@@ -1,5 +1,5 @@
 //
-//  MTHomeZujiCell.h
+//  MTHomeBannerCell.h
 //  MTShop
 //
 //  Created by DQ_Yang on 2017/12/27.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTHomeZujiCell : UICollectionViewCell
+@interface MTHomeBannerCell : UICollectionViewCell
 
 @end

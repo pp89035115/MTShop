@@ -104,6 +104,10 @@
 		3440B5711FE90DB8003DDC72 /* NSDate+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440B5701FE90DB8003DDC72 /* NSDate+Extend.m */; };
 		3440B5741FE90E15003DDC72 /* UIScreen+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440B5731FE90E15003DDC72 /* UIScreen+Extend.m */; };
 		3440B5771FE90E9D003DDC72 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3440B5751FE90E9D003DDC72 /* UIView+Layout.m */; };
+		344631F31FF339B3008B4F49 /* MTHomeZujiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 344631F21FF339B3008B4F49 /* MTHomeZujiCell.m */; };
+		344631F61FF33B61008B4F49 /* MTHomeBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 344631F51FF33B61008B4F49 /* MTHomeBannerCell.m */; };
+		344631F91FF34142008B4F49 /* MTHomePinpaiTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 344631F81FF34142008B4F49 /* MTHomePinpaiTitleView.m */; };
+		344631FB1FF344CC008B4F49 /* title_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 344631FA1FF344CC008B4F49 /* title_image@2x.png */; };
 		3458F3E61FF1DC9E00A73137 /* MTCityListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3458F3E51FF1DC9E00A73137 /* MTCityListController.m */; };
 		3458F3E81FF1DE5F00A73137 /* navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3458F3E71FF1DE5F00A73137 /* navigation_back@2x.png */; };
 		3458F3EB1FF1E5B000A73137 /* MTHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3458F3EA1FF1E5B000A73137 /* MTHomeTopView.m */; };
@@ -111,7 +115,6 @@
 		3458F3F01FF2284100A73137 /* home_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3458F3EF1FF2284100A73137 /* home_search@2x.png */; };
 		3458F3F31FF22D3300A73137 /* zhOverflyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3458F3F11FF22D3300A73137 /* zhOverflyView.m */; };
 		3458F3F61FF2324D00A73137 /* MTQiandaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3458F3F51FF2324D00A73137 /* MTQiandaoView.m */; };
-		3458F3F91FF259EA00A73137 /* MTHomeZujiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3458F3F81FF259EA00A73137 /* MTHomeZujiCell.m */; };
 		34D71D531FEB5E99004D5466 /* sina_关闭.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D71D521FEB5E99004D5466 /* sina_关闭.png */; };
 		54940886778126DAF6FA484A /* libPods-MTShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7CC120350E645078F76770 /* libPods-MTShop.a */; };
 /* End PBXBuildFile section */
@@ -305,6 +308,13 @@
 		3440B5731FE90E15003DDC72 /* UIScreen+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+Extend.m"; sourceTree = "<group>"; };
 		3440B5751FE90E9D003DDC72 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		3440B5761FE90E9D003DDC72 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		344631F11FF339B3008B4F49 /* MTHomeZujiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeZujiCell.h; sourceTree = "<group>"; };
+		344631F21FF339B3008B4F49 /* MTHomeZujiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeZujiCell.m; sourceTree = "<group>"; };
+		344631F41FF33B61008B4F49 /* MTHomeBannerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeBannerCell.h; sourceTree = "<group>"; };
+		344631F51FF33B61008B4F49 /* MTHomeBannerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeBannerCell.m; sourceTree = "<group>"; };
+		344631F71FF34142008B4F49 /* MTHomePinpaiTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomePinpaiTitleView.h; sourceTree = "<group>"; };
+		344631F81FF34142008B4F49 /* MTHomePinpaiTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomePinpaiTitleView.m; sourceTree = "<group>"; };
+		344631FA1FF344CC008B4F49 /* title_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_image@2x.png"; sourceTree = "<group>"; };
 		3458F3E41FF1DC9E00A73137 /* MTCityListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCityListController.h; sourceTree = "<group>"; };
 		3458F3E51FF1DC9E00A73137 /* MTCityListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCityListController.m; sourceTree = "<group>"; };
 		3458F3E71FF1DE5F00A73137 /* navigation_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_back@2x.png"; sourceTree = "<group>"; };
@@ -316,8 +326,6 @@
 		3458F3F21FF22D3300A73137 /* zhOverflyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zhOverflyView.h; sourceTree = "<group>"; };
 		3458F3F41FF2324D00A73137 /* MTQiandaoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTQiandaoView.h; sourceTree = "<group>"; };
 		3458F3F51FF2324D00A73137 /* MTQiandaoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTQiandaoView.m; sourceTree = "<group>"; };
-		3458F3F71FF259EA00A73137 /* MTHomeZujiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeZujiCell.h; sourceTree = "<group>"; };
-		3458F3F81FF259EA00A73137 /* MTHomeZujiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeZujiCell.m; sourceTree = "<group>"; };
 		34D71D521FEB5E99004D5466 /* sina_关闭.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sina_关闭.png"; sourceTree = "<group>"; };
 		84B9822701ABB0E2ECA8825B /* Pods-MTShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.release.xcconfig"; sourceTree = "<group>"; };
 		BD7CC120350E645078F76770 /* libPods-MTShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -439,8 +447,12 @@
 				3421853A1FE37B2E0037A48C /* MTHomeView.m */,
 				3458F3F41FF2324D00A73137 /* MTQiandaoView.h */,
 				3458F3F51FF2324D00A73137 /* MTQiandaoView.m */,
-				3458F3F71FF259EA00A73137 /* MTHomeZujiCell.h */,
-				3458F3F81FF259EA00A73137 /* MTHomeZujiCell.m */,
+				344631F11FF339B3008B4F49 /* MTHomeZujiCell.h */,
+				344631F21FF339B3008B4F49 /* MTHomeZujiCell.m */,
+				344631F41FF33B61008B4F49 /* MTHomeBannerCell.h */,
+				344631F51FF33B61008B4F49 /* MTHomeBannerCell.m */,
+				344631F71FF34142008B4F49 /* MTHomePinpaiTitleView.h */,
+				344631F81FF34142008B4F49 /* MTHomePinpaiTitleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -869,6 +881,7 @@
 		3458F3EC1FF20D4300A73137 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				344631FA1FF344CC008B4F49 /* title_image@2x.png */,
 				3458F3ED1FF20D4B00A73137 /* home_city_more@2x.png */,
 				3458F3EF1FF2284100A73137 /* home_search@2x.png */,
 			);
@@ -947,6 +960,7 @@
 				3440B5621FE8FECC003DDC72 /* tabBarNearby_h@2x.png in Resources */,
 				3458F3EE1FF20D4B00A73137 /* home_city_more@2x.png in Resources */,
 				3440B5611FE8FECC003DDC72 /* tabBarHome_h@2x.png in Resources */,
+				344631FB1FF344CC008B4F49 /* title_image@2x.png in Resources */,
 				3458F3E81FF1DE5F00A73137 /* navigation_back@2x.png in Resources */,
 				3440B55F1FE8FECC003DDC72 /* tabBarPublish@2x.png in Resources */,
 				3421851E1FE375110037A48C /* Assets.xcassets in Resources */,
@@ -1052,6 +1066,7 @@
 				342186331FE3B5C80037A48C /* UITextField+Extension.m in Sources */,
 				3421852D1FE37AEE0037A48C /* AppDelegate.m in Sources */,
 				342186481FE3B5C80037A48C /* UIViewController+LeftBarButton.m in Sources */,
+				344631F31FF339B3008B4F49 /* MTHomeZujiCell.m in Sources */,
 				3458F3EB1FF1E5B000A73137 /* MTHomeTopView.m in Sources */,
 				342186211FE3B5C80037A48C /* UIImage+FileName.m in Sources */,
 				3440B5741FE90E15003DDC72 /* UIScreen+Extend.m in Sources */,
@@ -1061,7 +1076,6 @@
 				342186471FE3B5C80037A48C /* UIViewController+Extension.m in Sources */,
 				342185931FE3B41C0037A48C /* MTBaseController.m in Sources */,
 				342186351FE3B5C80037A48C /* UIView+BlockGesture.m in Sources */,
-				3458F3F91FF259EA00A73137 /* MTHomeZujiCell.m in Sources */,
 				342186141FE3B5C80037A48C /* NSString+Extension.m in Sources */,
 				3421862A1FE3B5C80037A48C /* UIImage+Vector.m in Sources */,
 				3421862E1FE3B5C80037A48C /* UIKitExtend.m in Sources */,
@@ -1070,6 +1084,7 @@
 				342186201FE3B5C80037A48C /* UIImage+Color.m in Sources */,
 				3440B56B1FE90B3C003DDC72 /* zhFullView.m in Sources */,
 				342186411FE3B5C80037A48C /* UIView+Shake.m in Sources */,
+				344631F61FF33B61008B4F49 /* MTHomeBannerCell.m in Sources */,
 				342186341FE3B5C80037A48C /* UIView+Animation.m in Sources */,
 				3421863E1FE3B5C80037A48C /* UIView+Nib.m in Sources */,
 				3421861D1FE3B5C80037A48C /* UIImage+BetterFace.m in Sources */,
@@ -1102,6 +1117,7 @@
 				342186191FE3B5C80037A48C /* UIColor+LHExtension.m in Sources */,
 				3421862F1FE3B5C80037A48C /* UILabel+Extension.m in Sources */,
 				3421861A1FE3B5C80037A48C /* UIGestureRecognizer+Tag.m in Sources */,
+				344631F91FF34142008B4F49 /* MTHomePinpaiTitleView.m in Sources */,
 				342185821FE37F830037A48C /* MTTabBar.m in Sources */,
 				342185721FE37E2C0037A48C /* MTMessageView.m in Sources */,
 				342186281FE3B5C80037A48C /* UIImage+Resize.m in Sources */,
