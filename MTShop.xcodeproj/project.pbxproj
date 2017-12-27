@@ -108,6 +108,11 @@
 		344631F61FF33B61008B4F49 /* MTHomeBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 344631F51FF33B61008B4F49 /* MTHomeBannerCell.m */; };
 		344631F91FF34142008B4F49 /* MTHomePinpaiTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 344631F81FF34142008B4F49 /* MTHomePinpaiTitleView.m */; };
 		344631FB1FF344CC008B4F49 /* title_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 344631FA1FF344CC008B4F49 /* title_image@2x.png */; };
+		344632011FF34F4A008B4F49 /* MTHomePinPaiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 344632001FF34F4A008B4F49 /* MTHomePinPaiCell.m */; };
+		344632051FF36228008B4F49 /* pinpaiLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 344632041FF36228008B4F49 /* pinpaiLogo.png */; };
+		344632081FF363D7008B4F49 /* MTHomeShishiTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 344632071FF363D7008B4F49 /* MTHomeShishiTitleView.m */; };
+		3446320B1FF365B4008B4F49 /* MTHomeShishiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3446320A1FF365B4008B4F49 /* MTHomeShishiCell.m */; };
+		3446320E1FF3757D008B4F49 /* MTHomeShishiRollingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3446320D1FF3757D008B4F49 /* MTHomeShishiRollingCell.m */; };
 		3458F3E61FF1DC9E00A73137 /* MTCityListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3458F3E51FF1DC9E00A73137 /* MTCityListController.m */; };
 		3458F3E81FF1DE5F00A73137 /* navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3458F3E71FF1DE5F00A73137 /* navigation_back@2x.png */; };
 		3458F3EB1FF1E5B000A73137 /* MTHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3458F3EA1FF1E5B000A73137 /* MTHomeTopView.m */; };
@@ -315,6 +320,15 @@
 		344631F71FF34142008B4F49 /* MTHomePinpaiTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomePinpaiTitleView.h; sourceTree = "<group>"; };
 		344631F81FF34142008B4F49 /* MTHomePinpaiTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomePinpaiTitleView.m; sourceTree = "<group>"; };
 		344631FA1FF344CC008B4F49 /* title_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_image@2x.png"; sourceTree = "<group>"; };
+		344631FF1FF34F4A008B4F49 /* MTHomePinPaiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomePinPaiCell.h; sourceTree = "<group>"; };
+		344632001FF34F4A008B4F49 /* MTHomePinPaiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomePinPaiCell.m; sourceTree = "<group>"; };
+		344632041FF36228008B4F49 /* pinpaiLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinpaiLogo.png; sourceTree = "<group>"; };
+		344632061FF363D7008B4F49 /* MTHomeShishiTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeShishiTitleView.h; sourceTree = "<group>"; };
+		344632071FF363D7008B4F49 /* MTHomeShishiTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeShishiTitleView.m; sourceTree = "<group>"; };
+		344632091FF365B4008B4F49 /* MTHomeShishiCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeShishiCell.h; sourceTree = "<group>"; };
+		3446320A1FF365B4008B4F49 /* MTHomeShishiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeShishiCell.m; sourceTree = "<group>"; };
+		3446320C1FF3757D008B4F49 /* MTHomeShishiRollingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeShishiRollingCell.h; sourceTree = "<group>"; };
+		3446320D1FF3757D008B4F49 /* MTHomeShishiRollingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeShishiRollingCell.m; sourceTree = "<group>"; };
 		3458F3E41FF1DC9E00A73137 /* MTCityListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCityListController.h; sourceTree = "<group>"; };
 		3458F3E51FF1DC9E00A73137 /* MTCityListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCityListController.m; sourceTree = "<group>"; };
 		3458F3E71FF1DE5F00A73137 /* navigation_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_back@2x.png"; sourceTree = "<group>"; };
@@ -453,6 +467,14 @@
 				344631F51FF33B61008B4F49 /* MTHomeBannerCell.m */,
 				344631F71FF34142008B4F49 /* MTHomePinpaiTitleView.h */,
 				344631F81FF34142008B4F49 /* MTHomePinpaiTitleView.m */,
+				344631FF1FF34F4A008B4F49 /* MTHomePinPaiCell.h */,
+				344632001FF34F4A008B4F49 /* MTHomePinPaiCell.m */,
+				344632061FF363D7008B4F49 /* MTHomeShishiTitleView.h */,
+				344632071FF363D7008B4F49 /* MTHomeShishiTitleView.m */,
+				344632091FF365B4008B4F49 /* MTHomeShishiCell.h */,
+				3446320A1FF365B4008B4F49 /* MTHomeShishiCell.m */,
+				3446320C1FF3757D008B4F49 /* MTHomeShishiRollingCell.h */,
+				3446320D1FF3757D008B4F49 /* MTHomeShishiRollingCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -882,6 +904,7 @@
 			isa = PBXGroup;
 			children = (
 				344631FA1FF344CC008B4F49 /* title_image@2x.png */,
+				344632041FF36228008B4F49 /* pinpaiLogo.png */,
 				3458F3ED1FF20D4B00A73137 /* home_city_more@2x.png */,
 				3458F3EF1FF2284100A73137 /* home_search@2x.png */,
 			);
@@ -963,6 +986,7 @@
 				344631FB1FF344CC008B4F49 /* title_image@2x.png in Resources */,
 				3458F3E81FF1DE5F00A73137 /* navigation_back@2x.png in Resources */,
 				3440B55F1FE8FECC003DDC72 /* tabBarPublish@2x.png in Resources */,
+				344632051FF36228008B4F49 /* pinpaiLogo.png in Resources */,
 				3421851E1FE375110037A48C /* Assets.xcassets in Resources */,
 				3440B5631FE8FECC003DDC72 /* tabBarMine_h@2x.png in Resources */,
 				3458F3F01FF2284100A73137 /* home_search@2x.png in Resources */,
@@ -1053,8 +1077,10 @@
 				342186181FE3B5C80037A48C /* UIColor+Extension.m in Sources */,
 				3421863F1FE3B5C80037A48C /* UIView+Recursion.m in Sources */,
 				342186241FE3B5C80037A48C /* UIImage+Merge.m in Sources */,
+				344632011FF34F4A008B4F49 /* MTHomePinPaiCell.m in Sources */,
 				342185961FE3B42C0037A48C /* MTBaseModel.m in Sources */,
 				342185691FE37DF90037A48C /* MTMineModel.m in Sources */,
+				344632081FF363D7008B4F49 /* MTHomeShishiTitleView.m in Sources */,
 				3458F3E61FF1DC9E00A73137 /* MTCityListController.m in Sources */,
 				3421861C1FE3B5C80037A48C /* UIImage+animatedGIF.m in Sources */,
 				342185991FE3B4370037A48C /* MTBaseView.m in Sources */,
@@ -1068,6 +1094,7 @@
 				342186481FE3B5C80037A48C /* UIViewController+LeftBarButton.m in Sources */,
 				344631F31FF339B3008B4F49 /* MTHomeZujiCell.m in Sources */,
 				3458F3EB1FF1E5B000A73137 /* MTHomeTopView.m in Sources */,
+				3446320B1FF365B4008B4F49 /* MTHomeShishiCell.m in Sources */,
 				342186211FE3B5C80037A48C /* UIImage+FileName.m in Sources */,
 				3440B5741FE90E15003DDC72 /* UIScreen+Extend.m in Sources */,
 				3421855A1FE37DB50037A48C /* MTMessageController.m in Sources */,
@@ -1115,6 +1142,7 @@
 				3421862D1FE3B5C80037A48C /* UIImage+MJ.m in Sources */,
 				342185601FE37DD40037A48C /* MTNearbyModel.m in Sources */,
 				342186191FE3B5C80037A48C /* UIColor+LHExtension.m in Sources */,
+				3446320E1FF3757D008B4F49 /* MTHomeShishiRollingCell.m in Sources */,
 				3421862F1FE3B5C80037A48C /* UILabel+Extension.m in Sources */,
 				3421861A1FE3B5C80037A48C /* UIGestureRecognizer+Tag.m in Sources */,
 				344631F91FF34142008B4F49 /* MTHomePinpaiTitleView.m in Sources */,

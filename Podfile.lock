@@ -24,6 +24,7 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.15.1)
+  - RollingNotice (1.0.2)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
   - SDWebImage (4.2.2):
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - MJExtension
   - MJRefresh
+  - RollingNotice
   - SDCycleScrollView
   - SDWebImage
   - SVProgressHUD
@@ -77,6 +79,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
+  RollingNotice: 792a2712563d00191eb519c86b4825401a302c51
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
@@ -89,6 +92,6 @@ SPEC CHECKSUMS:
   zhPopupController: 411af38e63764130e4ae4ba5cde12c776dc84824
   ZJAnimationPopView: 23fcb7e67e9c26c14af4795b142df3215b910e6f
 
-PODFILE CHECKSUM: a5c77b6d38ec8214c02a2d5334ddf160aaf23f8c
+PODFILE CHECKSUM: b4570e800c327eb015feb1954f89edf21740314a
 
 COCOAPODS: 1.4.0.beta.2

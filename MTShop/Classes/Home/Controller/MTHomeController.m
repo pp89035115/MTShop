@@ -14,9 +14,11 @@
 
 #import "MTHomeZujiCell.h"
 #import "MTHomeBannerCell.h"
+#import "MTHomePinPaiCell.h"
+#import "MTHomeShishiCell.h"
 
 #import "MTHomePinpaiTitleView.h"
-
+#import "MTHomeShishiTitleView.h"
 @interface MTHomeController ()
 <
 UICollectionViewDelegate,
@@ -28,17 +30,32 @@ MTHomeTopViewDelegate
 @property (nonatomic ,strong)MTHomeTopView *topView;
 @property (nonatomic ,strong)MTQiandaoView *qiandaoView;
 @property (nonatomic ,strong)ZJAnimationPopView *popView;
+@property (nonatomic ,strong)NSArray *pinpais;
 @end
 
 /*cell*/
 static NSString *const MTHomeZujiCellId = @"MTHomeZujiCell";
 static NSString *const MTHomeBannerCellId = @"MTHomeBannerCell";
+static NSString *const MTHomePinPaiCellId = @"MTHomePinPaiCell";
+static NSString *const MTHomeShishiCellId = @"MTHomeShishiCell";
+
 /*headView*/
 static NSString *const MTHomePinPaiTitleViewId = @"MTHomePinPaiTitleView";
+static NSString *const MTHomeShishiTitleViewId = @"MTHomeShishiTitleView";
 
 
 
 @implementation MTHomeController
+
+- (NSArray *)pinpais
+{
+    if (!_pinpais) {
+        _pinpais = @[@{@"imageUrl":@"http://www.pinganshu.com/Skins/Default/Img/Common/logo.jpg"},
+                     @{@"imageUrl":@"http://www.deleongc.com/Images/top_06.jpg"},
+                     @{@"imageUrl":@"http://www.xxlzg.com/templets/zg/img/logo.png"},
+                     @{@"imageUrl":@"http://www.zjbeilv.com/Template/images/logo.jpg"}];
+    }return _pinpais;
+}
 
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -158,8 +175,12 @@ static NSString *const MTHomePinPaiTitleViewId = @"MTHomePinPaiTitleView";
 {
     [self.collectionView registerClass:[MTHomeZujiCell class] forCellWithReuseIdentifier:MTHomeZujiCellId];
     [self.collectionView registerClass:[MTHomeBannerCell class] forCellWithReuseIdentifier:MTHomeBannerCellId];
+    [self.collectionView registerClass:[MTHomePinPaiCell class] forCellWithReuseIdentifier:MTHomePinPaiCellId];
+    [self.collectionView registerClass:[MTHomeShishiCell class] forCellWithReuseIdentifier:MTHomeShishiCellId];
+
     
     [self.collectionView registerClass:[MTHomePinpaiTitleView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomePinPaiTitleViewId];
+    [self.collectionView registerClass:[MTHomeShishiTitleView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomeShishiTitleViewId];
 }
 
 #pragma mark - <UICollectionViewDelegate,UICollectionViewDataSource>
@@ -168,13 +189,16 @@ static NSString *const MTHomePinPaiTitleViewId = @"MTHomePinPaiTitleView";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if (section == 0 || section == 1) {
+    if (section == 0 || section == 1 || section == 3) {
         return 1;
-    }else
+    }else if (section == 2)
+    {
+        return 4;
+    }
+    else
     {
         return 0;
     }
-    
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -186,9 +210,18 @@ static NSString *const MTHomePinPaiTitleViewId = @"MTHomePinPaiTitleView";
     }else if (indexPath.section == 1)
     {
         MTHomeBannerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTHomeBannerCellId forIndexPath:indexPath];
-        cell.backgroundColor = LHRandomColor;
+        cell.backgroundColor = LHClearColor;
         tempCell = cell;
-    }else
+    }else if (indexPath.section == 2)
+    {
+        MTHomePinPaiCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTHomePinPaiCellId forIndexPath:indexPath];
+        tempCell = cell;
+    }else if (indexPath.section == 3)
+    {
+        MTHomeShishiCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTHomeShishiCellId forIndexPath:indexPath];
+        tempCell = cell;
+    }
+    else
     {
         
     }
@@ -202,6 +235,10 @@ static NSString *const MTHomePinPaiTitleViewId = @"MTHomePinPaiTitleView";
     if (kind == UICollectionElementKindSectionHeader){
         if (indexPath.section == 2) {
             MTHomePinpaiTitleView *pinpaiTitleView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomePinPaiTitleViewId forIndexPath:indexPath];
+            reusableview = pinpaiTitleView;
+        }else if (indexPath.section == 3)
+        {
+            MTHomeShishiTitleView *pinpaiTitleView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomeShishiTitleViewId forIndexPath:indexPath];
             reusableview = pinpaiTitleView;
         }
     }
@@ -218,7 +255,10 @@ static NSString *const MTHomePinPaiTitleViewId = @"MTHomePinPaiTitleView";
         return CGSizeMake(gScreenWidth, 30);
     }else if (indexPath.section == 1)
     {
-        return CGSizeMake(gScreenWidth, gScreenWidth / 1.5);
+        return CGSizeMake(gScreenWidth, gScreenWidth / 2);
+    }else if (indexPath.section == 2)
+    {
+        return CGSizeMake((gScreenWidth - 5) / 4, gScreenWidth / 6);
     }
     return CGSizeZero;
 }
@@ -234,7 +274,7 @@ static NSString *const MTHomePinPaiTitleViewId = @"MTHomePinPaiTitleView";
 #pragma mark - head宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     
-    if (section == 2) {
+    if (section == 2 || section == 3) {
         return CGSizeMake(gScreenWidth, 40);
     }
     
@@ -250,11 +290,11 @@ static NSString *const MTHomePinPaiTitleViewId = @"MTHomePinPaiTitleView";
 #pragma mark - <UICollectionViewDelegateFlowLayout>
 #pragma mark - X间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return (section == 5) ? 4 : 0;
+    return 0;
 }
 #pragma mark - Y间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return (section == 5) ? 4 : 0;
+    return 0;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {

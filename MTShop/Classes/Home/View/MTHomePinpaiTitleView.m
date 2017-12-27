@@ -11,6 +11,7 @@
 @interface MTHomePinpaiTitleView ()
 @property (nonatomic ,strong)UIButton *titleButton;
 @property (nonatomic ,strong)UIButton *moreButton;
+@property (nonatomic ,strong)UIView *lineView;
 @end
 
 @implementation MTHomePinpaiTitleView
@@ -20,6 +21,14 @@
     if (self = [super initWithFrame:frame]) {
         [self setupUI];
     }return self;
+}
+
+- (UIView *)lineView
+{
+    if (!_lineView) {
+        _lineView = [[UIView alloc]init];
+        _lineView.backgroundColor = LHSeperatorColor;
+    }return _lineView;
 }
 
 - (UIButton *)titleButton
@@ -49,6 +58,7 @@
     self.backgroundColor = [UIColor whiteColor];
     [self addSubview:self.titleButton];
     [self addSubview:self.moreButton];
+    [self addSubview:self.lineView];
 }
 
 - (void)layoutSubviews
@@ -58,6 +68,8 @@
     CGFloat button_h = self.height;
     self.titleButton.frame = CGRectMake(0, 0, button_w, button_h);
     self.moreButton.frame = CGRectMake(self.width - button_w, 0, button_w, button_h);
+    self.lineView.frame = CGRectMake(0, self.height - 1, self.width, 1);
+    
 }
 
 @end
