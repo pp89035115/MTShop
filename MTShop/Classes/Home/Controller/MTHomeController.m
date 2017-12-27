@@ -16,9 +16,14 @@
 #import "MTHomeBannerCell.h"
 #import "MTHomePinPaiCell.h"
 #import "MTHomeShishiCell.h"
+#import "MTHomeQiyeCell.h"
+#import "MTHomeLikeCell.h"
 
 #import "MTHomePinpaiTitleView.h"
 #import "MTHomeShishiTitleView.h"
+#import "MTHomeQiyeTitleView.h"
+#import "MTHomeLikeTitleView.h"
+
 @interface MTHomeController ()
 <
 UICollectionViewDelegate,
@@ -38,11 +43,15 @@ static NSString *const MTHomeZujiCellId = @"MTHomeZujiCell";
 static NSString *const MTHomeBannerCellId = @"MTHomeBannerCell";
 static NSString *const MTHomePinPaiCellId = @"MTHomePinPaiCell";
 static NSString *const MTHomeShishiCellId = @"MTHomeShishiCell";
+static NSString *const MTHomeQiyeCellId = @"MTHomeQiyeCell";
+static NSString *const MTHomeLikeCellId = @"MTHomeLikeCell";
+
 
 /*headView*/
 static NSString *const MTHomePinPaiTitleViewId = @"MTHomePinPaiTitleView";
 static NSString *const MTHomeShishiTitleViewId = @"MTHomeShishiTitleView";
-
+static NSString *const MTHomeQiyeTitleViewId = @"MTHomeQiyeTitleView";
+static NSString *const MTHomeLikeTitleViewId = @"MTHomeLikeTitleView";
 
 
 @implementation MTHomeController
@@ -118,7 +127,6 @@ static NSString *const MTHomeShishiTitleViewId = @"MTHomeShishiTitleView";
 }
 
 #pragma mark - setupQianDaoView
-
 - (MTQiandaoView *)qiandaoView
 {
     if (!_qiandaoView) {
@@ -177,10 +185,13 @@ static NSString *const MTHomeShishiTitleViewId = @"MTHomeShishiTitleView";
     [self.collectionView registerClass:[MTHomeBannerCell class] forCellWithReuseIdentifier:MTHomeBannerCellId];
     [self.collectionView registerClass:[MTHomePinPaiCell class] forCellWithReuseIdentifier:MTHomePinPaiCellId];
     [self.collectionView registerClass:[MTHomeShishiCell class] forCellWithReuseIdentifier:MTHomeShishiCellId];
+    [self.collectionView registerClass:[MTHomeQiyeCell class] forCellWithReuseIdentifier:MTHomeQiyeCellId];
+    [self.collectionView registerClass:[MTHomeLikeCell class] forCellWithReuseIdentifier:MTHomeLikeCellId];
 
-    
     [self.collectionView registerClass:[MTHomePinpaiTitleView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomePinPaiTitleViewId];
     [self.collectionView registerClass:[MTHomeShishiTitleView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomeShishiTitleViewId];
+    [self.collectionView registerClass:[MTHomeQiyeTitleView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomeQiyeTitleViewId];
+    [self.collectionView registerClass:[MTHomeLikeTitleView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomeLikeTitleViewId];
 }
 
 #pragma mark - <UICollectionViewDelegate,UICollectionViewDataSource>
@@ -194,6 +205,12 @@ static NSString *const MTHomeShishiTitleViewId = @"MTHomeShishiTitleView";
     }else if (section == 2)
     {
         return 4;
+    }else if (section == 4)
+    {
+        return 3;
+    }else if (section == 5)
+    {
+        return 6;
     }
     else
     {
@@ -203,22 +220,31 @@ static NSString *const MTHomeShishiTitleViewId = @"MTHomeShishiTitleView";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *tempCell = nil;
-    if (indexPath.section == 0) {
+    if (indexPath.section == 0)//   足迹
+    {
         MTHomeZujiCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTHomeZujiCellId forIndexPath:indexPath];
         cell.backgroundColor = [UIColor whiteColor];
         tempCell = cell;
-    }else if (indexPath.section == 1)
+    }else if (indexPath.section == 1)// 轮播图
     {
         MTHomeBannerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTHomeBannerCellId forIndexPath:indexPath];
         cell.backgroundColor = LHClearColor;
         tempCell = cell;
-    }else if (indexPath.section == 2)
+    }else if (indexPath.section == 2) // 品牌
     {
         MTHomePinPaiCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTHomePinPaiCellId forIndexPath:indexPath];
         tempCell = cell;
-    }else if (indexPath.section == 3)
+    }else if (indexPath.section == 3) //实时信息
     {
         MTHomeShishiCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTHomeShishiCellId forIndexPath:indexPath];
+        tempCell = cell;
+    }else if (indexPath.section == 4)// 企业信息
+    {
+        MTHomeQiyeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTHomeQiyeCellId forIndexPath:indexPath];
+        tempCell = cell;
+    }else if (indexPath.section == 5)
+    {
+        MTHomeLikeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTHomeLikeCellId forIndexPath:indexPath];
         tempCell = cell;
     }
     else
@@ -238,8 +264,20 @@ static NSString *const MTHomeShishiTitleViewId = @"MTHomeShishiTitleView";
             reusableview = pinpaiTitleView;
         }else if (indexPath.section == 3)
         {
-            MTHomeShishiTitleView *pinpaiTitleView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomeShishiTitleViewId forIndexPath:indexPath];
-            reusableview = pinpaiTitleView;
+            MTHomeShishiTitleView *shishiTitleView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomeShishiTitleViewId forIndexPath:indexPath];
+            reusableview = shishiTitleView;
+        }else if (indexPath.section == 4)
+        {
+            MTHomeQiyeTitleView *qiyeTitleView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomeQiyeTitleViewId forIndexPath:indexPath];
+            reusableview = qiyeTitleView;
+        }else if (indexPath.section == 5)
+        {
+            MTHomeLikeTitleView *likeTitleView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTHomeLikeTitleViewId forIndexPath:indexPath];
+            reusableview = likeTitleView;
+        }
+        else
+        {
+            
         }
     }
     if (kind == UICollectionElementKindSectionFooter) {
@@ -259,6 +297,15 @@ static NSString *const MTHomeShishiTitleViewId = @"MTHomeShishiTitleView";
     }else if (indexPath.section == 2)
     {
         return CGSizeMake((gScreenWidth - 5) / 4, gScreenWidth / 6);
+    }else if (indexPath.section == 3)
+    {
+        return CGSizeMake(gScreenWidth, gScreenWidth / 4);
+    }else if (indexPath.section == 4)
+    {
+        return CGSizeMake(gScreenWidth, gScreenWidth / 4);
+    }else if (indexPath.section == 5)
+    {
+        return CGSizeMake((gScreenWidth - 4) / 2,(gScreenWidth - 4) / 2 + 40);
     }
     return CGSizeZero;
 }
@@ -274,7 +321,7 @@ static NSString *const MTHomeShishiTitleViewId = @"MTHomeShishiTitleView";
 #pragma mark - head宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     
-    if (section == 2 || section == 3) {
+    if (section == 2 || section == 3 || section == 4 || section == 5) {
         return CGSizeMake(gScreenWidth, 40);
     }
     
@@ -290,10 +337,19 @@ static NSString *const MTHomeShishiTitleViewId = @"MTHomeShishiTitleView";
 #pragma mark - <UICollectionViewDelegateFlowLayout>
 #pragma mark - X间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    if (section == 5) {
+        return 4;
+    }
     return 0;
 }
 #pragma mark - Y间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    if (section == 4) {
+        return 2;
+    }else if (section == 5)
+    {
+        return 4;
+    }
     return 0;
 }
 

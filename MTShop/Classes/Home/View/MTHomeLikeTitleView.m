@@ -1,21 +1,21 @@
 //
-//  MTHomeShishiTitleView.m
+//  MTHomeLikeTitleView.m
 //  MTShop
 //
 //  Created by DQ_Yang on 2017/12/27.
 //  Copyright © 2017年 MT. All rights reserved.
 //
 
-#import "MTHomeShishiTitleView.h"
-@interface MTHomeShishiTitleView ()
+#import "MTHomeLikeTitleView.h"
+
+@interface MTHomeLikeTitleView ()
 @property (nonatomic ,strong)UIButton *titleButton;
 @property (nonatomic ,strong)UIButton *moreButton;
 @property (nonatomic ,strong)UIView *lineView;
 @property (nonatomic ,strong)UIView *topLineView;
 @end
 
-@implementation MTHomeShishiTitleView
-
+@implementation MTHomeLikeTitleView
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
@@ -44,7 +44,7 @@
     if (!_titleButton) {
         _titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_titleButton setImage:[UIImage imageNamed:@"title_image"] forState:UIControlStateNormal];
-        [_titleButton setTitle:@"实时现货信息" forState:UIControlStateNormal];
+        [_titleButton setTitle:@"猜你需要" forState:UIControlStateNormal];
         [_titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _titleButton.titleLabel.font = Font(13);
     }return _titleButton;
@@ -81,5 +81,4 @@
     self.topLineView.frame = CGRectMake(0, 1, self.width, 1);
     
 }
-
 @end

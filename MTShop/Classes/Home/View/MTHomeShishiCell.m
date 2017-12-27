@@ -8,6 +8,8 @@
 
 #import "MTHomeShishiCell.h"
 #import "GYRollingNoticeView.h"
+#import "MTHomeShishiRollingCell.h"
+
 @interface MTHomeShishiCell ()
 <
     GYRollingNoticeViewDelegate,
@@ -34,9 +36,9 @@
     }return _rollingView;
 }
 
-
-
 - (void)setupUI{
+    [self.rollingView registerClass:[MTHomeShishiRollingCell class] forCellReuseIdentifier:@"MTHomeShishiRollingCell"];
+    [self.rollingView reloadDataAndStartRoll];
     [self.contentView addSubview:self.rollingView];
 }
 
@@ -48,9 +50,15 @@
 
 - (GYNoticeViewCell *)rollingNoticeView:(GYRollingNoticeView *)rollingView cellAtIndex:(NSUInteger)index
 {
-    
+    MTHomeShishiRollingCell *cell = [rollingView dequeueReusableCellWithIdentifier:@"MTHomeShishiRollingCell"];
+    return cell;
 }
 
+- (void)didClickRollingNoticeView:(GYRollingNoticeView *)rollingView forIndex:(NSUInteger)index
+{
+    NSLog(@"点击的index: %ld", index);
+
+}
 
 - (void)layoutSubviews
 {

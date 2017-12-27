@@ -1,20 +1,21 @@
 //
-//  MTHomeShishiTitleView.m
+//  MTHomeQiyeTitleView.m
 //  MTShop
 //
 //  Created by DQ_Yang on 2017/12/27.
 //  Copyright © 2017年 MT. All rights reserved.
 //
 
-#import "MTHomeShishiTitleView.h"
-@interface MTHomeShishiTitleView ()
+#import "MTHomeQiyeTitleView.h"
+
+@interface MTHomeQiyeTitleView ()
 @property (nonatomic ,strong)UIButton *titleButton;
 @property (nonatomic ,strong)UIButton *moreButton;
 @property (nonatomic ,strong)UIView *lineView;
 @property (nonatomic ,strong)UIView *topLineView;
 @end
 
-@implementation MTHomeShishiTitleView
+@implementation MTHomeQiyeTitleView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -44,7 +45,7 @@
     if (!_titleButton) {
         _titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_titleButton setImage:[UIImage imageNamed:@"title_image"] forState:UIControlStateNormal];
-        [_titleButton setTitle:@"实时现货信息" forState:UIControlStateNormal];
+        [_titleButton setTitle:@"企业信息库" forState:UIControlStateNormal];
         [_titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _titleButton.titleLabel.font = Font(13);
     }return _titleButton;

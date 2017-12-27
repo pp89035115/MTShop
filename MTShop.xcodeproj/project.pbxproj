@@ -113,6 +113,13 @@
 		344632081FF363D7008B4F49 /* MTHomeShishiTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 344632071FF363D7008B4F49 /* MTHomeShishiTitleView.m */; };
 		3446320B1FF365B4008B4F49 /* MTHomeShishiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3446320A1FF365B4008B4F49 /* MTHomeShishiCell.m */; };
 		3446320E1FF3757D008B4F49 /* MTHomeShishiRollingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3446320D1FF3757D008B4F49 /* MTHomeShishiRollingCell.m */; };
+		344632111FF3825A008B4F49 /* MTHomeQiyeTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 344632101FF3825A008B4F49 /* MTHomeQiyeTitleView.m */; };
+		344632141FF38345008B4F49 /* MTHomeQiyeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 344632131FF38345008B4F49 /* MTHomeQiyeCell.m */; };
+		344632181FF38974008B4F49 /* time_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 344632151FF38974008B4F49 /* time_image@2x.png */; };
+		344632191FF38974008B4F49 /* location_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 344632161FF38974008B4F49 /* location_image@2x.png */; };
+		3446321A1FF38974008B4F49 /* phone_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 344632171FF38974008B4F49 /* phone_image@2x.png */; };
+		3446321D1FF38F97008B4F49 /* MTHomeLikeTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3446321C1FF38F97008B4F49 /* MTHomeLikeTitleView.m */; };
+		344632201FF390A5008B4F49 /* MTHomeLikeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3446321F1FF390A5008B4F49 /* MTHomeLikeCell.m */; };
 		3458F3E61FF1DC9E00A73137 /* MTCityListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3458F3E51FF1DC9E00A73137 /* MTCityListController.m */; };
 		3458F3E81FF1DE5F00A73137 /* navigation_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3458F3E71FF1DE5F00A73137 /* navigation_back@2x.png */; };
 		3458F3EB1FF1E5B000A73137 /* MTHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3458F3EA1FF1E5B000A73137 /* MTHomeTopView.m */; };
@@ -329,6 +336,17 @@
 		3446320A1FF365B4008B4F49 /* MTHomeShishiCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeShishiCell.m; sourceTree = "<group>"; };
 		3446320C1FF3757D008B4F49 /* MTHomeShishiRollingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeShishiRollingCell.h; sourceTree = "<group>"; };
 		3446320D1FF3757D008B4F49 /* MTHomeShishiRollingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeShishiRollingCell.m; sourceTree = "<group>"; };
+		3446320F1FF3825A008B4F49 /* MTHomeQiyeTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeQiyeTitleView.h; sourceTree = "<group>"; };
+		344632101FF3825A008B4F49 /* MTHomeQiyeTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeQiyeTitleView.m; sourceTree = "<group>"; };
+		344632121FF38345008B4F49 /* MTHomeQiyeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeQiyeCell.h; sourceTree = "<group>"; };
+		344632131FF38345008B4F49 /* MTHomeQiyeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeQiyeCell.m; sourceTree = "<group>"; };
+		344632151FF38974008B4F49 /* time_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time_image@2x.png"; sourceTree = "<group>"; };
+		344632161FF38974008B4F49 /* location_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_image@2x.png"; sourceTree = "<group>"; };
+		344632171FF38974008B4F49 /* phone_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone_image@2x.png"; sourceTree = "<group>"; };
+		3446321B1FF38F97008B4F49 /* MTHomeLikeTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeLikeTitleView.h; sourceTree = "<group>"; };
+		3446321C1FF38F97008B4F49 /* MTHomeLikeTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeLikeTitleView.m; sourceTree = "<group>"; };
+		3446321E1FF390A5008B4F49 /* MTHomeLikeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeLikeCell.h; sourceTree = "<group>"; };
+		3446321F1FF390A5008B4F49 /* MTHomeLikeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeLikeCell.m; sourceTree = "<group>"; };
 		3458F3E41FF1DC9E00A73137 /* MTCityListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCityListController.h; sourceTree = "<group>"; };
 		3458F3E51FF1DC9E00A73137 /* MTCityListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCityListController.m; sourceTree = "<group>"; };
 		3458F3E71FF1DE5F00A73137 /* navigation_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigation_back@2x.png"; sourceTree = "<group>"; };
@@ -475,6 +493,14 @@
 				3446320A1FF365B4008B4F49 /* MTHomeShishiCell.m */,
 				3446320C1FF3757D008B4F49 /* MTHomeShishiRollingCell.h */,
 				3446320D1FF3757D008B4F49 /* MTHomeShishiRollingCell.m */,
+				3446320F1FF3825A008B4F49 /* MTHomeQiyeTitleView.h */,
+				344632101FF3825A008B4F49 /* MTHomeQiyeTitleView.m */,
+				344632121FF38345008B4F49 /* MTHomeQiyeCell.h */,
+				344632131FF38345008B4F49 /* MTHomeQiyeCell.m */,
+				3446321B1FF38F97008B4F49 /* MTHomeLikeTitleView.h */,
+				3446321C1FF38F97008B4F49 /* MTHomeLikeTitleView.m */,
+				3446321E1FF390A5008B4F49 /* MTHomeLikeCell.h */,
+				3446321F1FF390A5008B4F49 /* MTHomeLikeCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -903,6 +929,9 @@
 		3458F3EC1FF20D4300A73137 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				344632161FF38974008B4F49 /* location_image@2x.png */,
+				344632171FF38974008B4F49 /* phone_image@2x.png */,
+				344632151FF38974008B4F49 /* time_image@2x.png */,
 				344631FA1FF344CC008B4F49 /* title_image@2x.png */,
 				344632041FF36228008B4F49 /* pinpaiLogo.png */,
 				3458F3ED1FF20D4B00A73137 /* home_city_more@2x.png */,
@@ -993,9 +1022,12 @@
 				3440B55D1FE8FECC003DDC72 /* tabBarPublish_h@2x.png in Resources */,
 				3440B5601FE8FECC003DDC72 /* tabBarMessage@2x.png in Resources */,
 				3440B5651FE8FECC003DDC72 /* tabBarMine@2x.png in Resources */,
+				344632181FF38974008B4F49 /* time_image@2x.png in Resources */,
 				34D71D531FEB5E99004D5466 /* sina_关闭.png in Resources */,
+				3446321A1FF38974008B4F49 /* phone_image@2x.png in Resources */,
 				3440B55E1FE8FECC003DDC72 /* tabBarHome@2x.png in Resources */,
 				3440B5641FE8FECC003DDC72 /* tabBarMessage_h@2x.png in Resources */,
+				344632191FF38974008B4F49 /* location_image@2x.png in Resources */,
 				3440B5661FE8FECC003DDC72 /* tabBarNearby@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1063,6 +1095,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3446321D1FF38F97008B4F49 /* MTHomeLikeTitleView.m in Sources */,
 				3421853B1FE37B2E0037A48C /* MTHomeView.m in Sources */,
 				3421862B1FE3B5C80037A48C /* UIImage+BHImageColor.m in Sources */,
 				342185631FE37DE10037A48C /* MTPublishModel.m in Sources */,
@@ -1130,6 +1163,7 @@
 				3421861B1FE3B5C80037A48C /* UIImage+Alpha.m in Sources */,
 				342186221FE3B5C80037A48C /* UIImage+FX.m in Sources */,
 				342186121FE3B5C80037A48C /* NSDictionary+BHExtension.m in Sources */,
+				344632111FF3825A008B4F49 /* MTHomeQiyeTitleView.m in Sources */,
 				342186401FE3B5C80037A48C /* UIView+Screenshot.m in Sources */,
 				342186151FE3B5C80037A48C /* SYImageBrower.m in Sources */,
 				342186451FE3B5C80037A48C /* UIView+Extension.m in Sources */,
@@ -1137,6 +1171,7 @@
 				342185851FE37F950037A48C /* MTUser.m in Sources */,
 				342186131FE3B5C80037A48C /* NSFileManager+LHExtension.m in Sources */,
 				342186441FE3B5C80037A48C /* UIView+Visuals.m in Sources */,
+				344632141FF38345008B4F49 /* MTHomeQiyeCell.m in Sources */,
 				342186371FE3B5C80037A48C /* UIView+CustomBorder.m in Sources */,
 				342186291FE3B5C80037A48C /* UIImage+RoundedCorner.m in Sources */,
 				3421862D1FE3B5C80037A48C /* UIImage+MJ.m in Sources */,
@@ -1159,6 +1194,7 @@
 				342186311FE3B5C80037A48C /* UITabBar+bageValue.m in Sources */,
 				342185571FE37DAA0037A48C /* MTPublishController.m in Sources */,
 				342185511FE37D7D0037A48C /* MTNearbyController.m in Sources */,
+				344632201FF390A5008B4F49 /* MTHomeLikeCell.m in Sources */,
 				342186111FE3B5C80037A48C /* NSDate+XMGExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
