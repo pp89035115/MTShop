@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7AFD43B1A93A27FF0DCF9AA05EE109E8'
+               BlueprintIdentifier = '41C944E5DF33B435CA84ADEC80BB6E94'
                BlueprintName = 'ZJAnimationPopView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libZJAnimationPopView.a'>

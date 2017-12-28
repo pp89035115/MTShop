@@ -20,5 +20,6 @@ target 'MTShop' do
    	pod 'zhPopupController'
 	pod 'GQGesVCTransition'
     	pod 'ZJAnimationPopView'
-	pod 'RollingNotice'	
+	pod 'RollingNotice'
+	pod 'PYSearch'
 end
