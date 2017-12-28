@@ -30,7 +30,7 @@
 {
     if (!_iconImageView) {
         _iconImageView = [UIImageView new];
-        _iconImageView.backgroundColor = LHRandomColor;
+        _iconImageView.backgroundColor = LHSeperatorColor;
     }return _iconImageView;
 }
 - (UILabel *)nameLabel
@@ -99,15 +99,16 @@
     [super layoutSubviews];
     CGFloat padding = 10;
     CGFloat image_size = self.width - padding *8;
-    CGFloat label_w = image_size;
+    CGFloat label_w = self.width / 3 * 2;
     CGFloat label_h = (self.height - image_size - padding *2) / 3;
     
     self.iconImageView.frame = CGRectMake(padding *4, padding, image_size, image_size);
-    self.nameLabel.frame = CGRectMake(CGRectGetMinX(self.iconImageView.frame), CGRectGetMaxY(self.iconImageView.frame), label_w, label_h);
+    self.nameLabel.frame = CGRectMake(padding, CGRectGetMaxY(self.iconImageView.frame), label_w, label_h);
     self.locationLabel.frame = CGRectMake(CGRectGetMaxX(self.nameLabel.frame), CGRectGetMinY(self.nameLabel.frame), padding *4, padding *2);
-    self.sizeLabel.frame = CGRectMake(CGRectGetMinX(self.iconImageView.frame), CGRectGetMaxY(self.nameLabel.frame), label_w, label_h);
-    self.priceLabel.frame = CGRectMake(CGRectGetMinX(self.iconImageView.frame), CGRectGetMaxY(self.sizeLabel.frame), label_w / 2, label_h);
-    self.levelLabel.frame = CGRectMake((CGRectGetMaxX(self.priceLabel.frame)), CGRectGetMaxY(self.sizeLabel.frame), label_w / 2, label_h);
+    self.locationLabel.centerY = self.nameLabel.centerY;
+    self.sizeLabel.frame = CGRectMake(padding, CGRectGetMaxY(self.nameLabel.frame), label_w, label_h);
+    self.priceLabel.frame = CGRectMake(padding, CGRectGetMaxY(self.sizeLabel.frame), self.width / 3, label_h);
+    self.levelLabel.frame = CGRectMake((CGRectGetMaxX(self.priceLabel.frame)), CGRectGetMaxY(self.sizeLabel.frame), label_w, label_h);
 }
 
 @end

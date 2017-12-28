@@ -27,7 +27,7 @@
 - (void)setupSubViews
 {
     self.cityButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.cityButton setTitle:@"临沂" forState:UIControlStateNormal];
+    [self.cityButton setTitle:@"临沂市" forState:UIControlStateNormal];
     [self.cityButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [self.cityButton setImage:[UIImage imageNamed:@"home_city_more"] forState:UIControlStateNormal];
     self.cityButton.titleLabel.font = Font(14);
@@ -84,7 +84,7 @@
 {
     [super layoutSubviews];
     CGFloat padding = 10;
-    CGFloat button_width = self.width / 5;
+    CGFloat button_width = self.width / 4.5;
     CGFloat button_height = self.height - padding *2;
     CGFloat bgImage_height = self.height - 30;
     self.bgImageView.frame = CGRectMake(padding *2, padding *2, self.width - button_width, bgImage_height);

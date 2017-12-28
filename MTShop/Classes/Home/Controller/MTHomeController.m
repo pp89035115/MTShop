@@ -26,6 +26,7 @@
 
 @interface MTHomeController ()
 <
+MTCityListControllerDelegate,
 UICollectionViewDelegate,
 UICollectionViewDataSource,
 MTHomeTopViewDelegate
@@ -114,8 +115,18 @@ static NSString *const MTHomeLikeTitleViewId = @"MTHomeLikeTitleView";
 #pragma mark - <MTHomeTopViewDelegate>
 - (void)topViewCityButtonClick:(MTHomeTopView *)topView
 {
-    LHFUNCTION
+//    LHFUNCTION
+    
+    MTCityListController *cityListVC = [MTCityListController new];
+    cityListVC.delegate = self;
+//    cityListVC.cityModel.selectedCity = topView.cityButton.titleLabel.text;
+//    cityListVC.cityModel.selectedCityId = topView.cityModel.selectedCityId;
+    
+    UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:cityListVC];
+    
+    [self presentViewController:nv animated:YES completion:nil];
 }
+
 - (void)topViewSearchButtonClick:(MTHomeTopView *)topView
 {
     LHFUNCTION
@@ -124,6 +135,15 @@ static NSString *const MTHomeLikeTitleViewId = @"MTHomeLikeTitleView";
 {
     LHFUNCTION
     [self showQiandaoCard];
+}
+
+#pragma mark <MTCityListControllerDelegate>
+- (void)mt_cityListSelectedCity:(NSString *)selectedCity Id:(NSInteger)Id
+{
+    self.topView.cityModel.selectedCityId = Id;
+    [self.topView.cityButton setTitle:selectedCity forState:UIControlStateNormal];
+    [self.topView.cityButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -self.topView.cityButton.imageView.size.width, 0, self.topView.cityButton.imageView.size.width)];
+    [self.topView.cityButton setImageEdgeInsets:UIEdgeInsetsMake(0, self.topView.cityButton.titleLabel.bounds.size.width, 0, -self.topView.cityButton.titleLabel.bounds.size.width)];
 }
 
 #pragma mark - setupQianDaoView

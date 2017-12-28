@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MTCityModel.h"
+
 @class MTHomeTopView;
 @protocol MTHomeTopViewDelegate <NSObject>
 - (void)topViewCityButtonClick:(MTHomeTopView *)topView;
@@ -19,4 +21,5 @@
 @property (nonatomic ,strong)UIButton *cityButton;
 @property (nonatomic ,strong)UIButton *searchButton;
 @property (nonatomic ,strong)UIButton *qianDaoButton;
+@property (nonatomic ,strong)MTCityModel *cityModel;
 @end
