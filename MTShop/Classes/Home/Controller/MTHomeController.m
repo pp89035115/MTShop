@@ -9,8 +9,12 @@
 #import "MTHomeController.h"
 #import "MTHomeTopView.h"
 #import "MTCityListController.h"
+#import "MTHomeSearchController.h"
+#import "MTNavigationController.h"
 #import "ZJAnimationPopView.h"
 #import "MTQiandaoView.h"
+#import "PYSearch.h"
+
 
 #import "MTHomeZujiCell.h"
 #import "MTHomeBannerCell.h"
@@ -29,7 +33,9 @@
 MTCityListControllerDelegate,
 UICollectionViewDelegate,
 UICollectionViewDataSource,
-MTHomeTopViewDelegate
+MTHomeTopViewDelegate,
+PYSearchViewControllerDelegate,
+PYSearchViewControllerDataSource
 >
 @property (nonatomic ,strong)UICollectionView *collectionView;
 @property (nonatomic ,strong)UICollectionViewFlowLayout *layout;
@@ -115,25 +121,33 @@ static NSString *const MTHomeLikeTitleViewId = @"MTHomeLikeTitleView";
 #pragma mark - <MTHomeTopViewDelegate>
 - (void)topViewCityButtonClick:(MTHomeTopView *)topView
 {
-//    LHFUNCTION
-    
     MTCityListController *cityListVC = [MTCityListController new];
     cityListVC.delegate = self;
-//    cityListVC.cityModel.selectedCity = topView.cityButton.titleLabel.text;
-//    cityListVC.cityModel.selectedCityId = topView.cityModel.selectedCityId;
+    cityListVC.cityModel.selectedCity = topView.cityButton.titleLabel.text;
+    cityListVC.cityModel.selectedCityId = topView.cityModel.selectedCityId;
     
     UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:cityListVC];
-    
     [self presentViewController:nv animated:YES completion:nil];
 }
 
 - (void)topViewSearchButtonClick:(MTHomeTopView *)topView
 {
-    LHFUNCTION
+//    PYSearchViewController *searchViewController = [PYSearchViewController searchViewControllerWithHotSearches:nil searchBarPlaceholder:@"请输入" didSearchBlock:^(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText) {
+//
+//        [searchViewController.navigationController pushViewController:[[MTHomeSearchController alloc] init] animated:YES];
+//    }];
+//    searchViewController.searchHistoryStyle = PYHotSearchStyleNormalTag;
+//    searchViewController.delegate = self;
+//
+//    MTNavigationController *nav = [[MTNavigationController alloc] initWithRootViewController:searchViewController];
+//    [self presentViewController:nav animated:YES completion:nil];
+    MTHomeSearchController *searchVc = [[MTHomeSearchController alloc]init];
+    searchVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:searchVc animated:YES];
+    
 }
 - (void)topViewQiandaoButtonClick:(MTHomeTopView *)topView
 {
-    LHFUNCTION
     [self showQiandaoCard];
 }
 

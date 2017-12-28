@@ -15,6 +15,7 @@
 		3409C2B31FF4892100946EC1 /* MTCityLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3409C2B21FF4892100946EC1 /* MTCityLocationView.m */; };
 		3409C2B61FF4896800946EC1 /* MTLocationHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3409C2B51FF4896800946EC1 /* MTLocationHelp.m */; };
 		3409C2B81FF48C5F00946EC1 /* home_city_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3409C2B71FF48C5F00946EC1 /* home_city_location@2x.png */; };
+		3409C2BB1FF49A1100946EC1 /* MTHomeSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3409C2BA1FF49A1100946EC1 /* MTHomeSearchController.m */; };
 		3421851E1FE375110037A48C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3421851D1FE375110037A48C /* Assets.xcassets */; };
 		342185241FE375110037A48C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 342185231FE375110037A48C /* main.m */; };
 		3421852D1FE37AEE0037A48C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421852C1FE37AEE0037A48C /* AppDelegate.m */; };
@@ -154,6 +155,8 @@
 		3409C2B41FF4896800946EC1 /* MTLocationHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLocationHelp.h; sourceTree = "<group>"; };
 		3409C2B51FF4896800946EC1 /* MTLocationHelp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLocationHelp.m; sourceTree = "<group>"; };
 		3409C2B71FF48C5F00946EC1 /* home_city_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_city_location@2x.png"; sourceTree = "<group>"; };
+		3409C2B91FF49A1100946EC1 /* MTHomeSearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHomeSearchController.h; sourceTree = "<group>"; };
+		3409C2BA1FF49A1100946EC1 /* MTHomeSearchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTHomeSearchController.m; sourceTree = "<group>"; };
 		342185111FE375110037A48C /* MTShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3421851D1FE375110037A48C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		342185221FE375110037A48C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -493,6 +496,8 @@
 				342185341FE37B140037A48C /* MTHomeController.m */,
 				3458F3E41FF1DC9E00A73137 /* MTCityListController.h */,
 				3458F3E51FF1DC9E00A73137 /* MTCityListController.m */,
+				3409C2B91FF49A1100946EC1 /* MTHomeSearchController.h */,
+				3409C2BA1FF49A1100946EC1 /* MTHomeSearchController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1201,6 +1206,7 @@
 				3421857C1FE37F490037A48C /* MTTabBarController.m in Sources */,
 				3440B5711FE90DB8003DDC72 /* NSDate+Extend.m in Sources */,
 				3440B5771FE90E9D003DDC72 /* UIView+Layout.m in Sources */,
+				3409C2BB1FF49A1100946EC1 /* MTHomeSearchController.m in Sources */,
 				342186161FE3B5C80037A48C /* UIBarButtonItem+MJ.m in Sources */,
 				3421863D1FE3B5C80037A48C /* UIView+GestureCallback.m in Sources */,
 				3409C2B61FF4896800946EC1 /* MTLocationHelp.m in Sources */,
