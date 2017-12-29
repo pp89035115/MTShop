@@ -19,6 +19,7 @@
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
+    
     UIView *searchView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, gScreenWidth / 4 * 3, 30)];
     searchView.backgroundColor = [UIColor whiteColor];
     searchView.layer.cornerRadius = 5.f;
