@@ -16,22 +16,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+    UIView *searchView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, gScreenWidth / 4 * 3, 30)];
+    searchView.backgroundColor = [UIColor whiteColor];
+    searchView.layer.cornerRadius = 5.f;
+    UIButton *changeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    changeButton.frame = CGRectMake(0, 0, 60, 30);
+    changeButton.backgroundColor = LHClearColor;
+    changeButton.titleLabel.font = Font(13);
+    [changeButton setImage:[UIImage imageNamed:@"home_city_more"] forState:UIControlStateNormal];
+    [changeButton setTitle:@"实时" forState:UIControlStateNormal];
+    [changeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [changeButton setTitleEdgeInsets:UIEdgeInsetsMake(0, - changeButton.imageView.size.width, 0, changeButton.imageView.size.width)];
+    [changeButton setImageEdgeInsets:UIEdgeInsetsMake(0, changeButton.titleLabel.bounds.size.width, 0, - changeButton.titleLabel.bounds.size.width)];
+    [searchView addSubview:changeButton];
+    UITextField *searchField = [[UITextField alloc]initWithFrame:CGRectMake(CGRectGetMaxX(changeButton.frame), 0, searchView.width - changeButton.width, 30)];
+    [searchView addSubview:searchField];
+    
+    self.navigationItem.titleView = searchView;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
