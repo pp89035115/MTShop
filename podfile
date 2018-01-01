@@ -22,4 +22,5 @@ target 'MTShop' do
     	pod 'ZJAnimationPopView'
 	pod 'RollingNotice'
 	pod 'PYSearch'
+	pod 'JMDropMenu'
 end

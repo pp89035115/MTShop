@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MTMineView;
+@protocol MTMineViewDelegate <NSObject>
+- (void)mt_mineViewAvatarClick:(MTMineView *)mineView;
+- (void)mt_mineViewSettingClick:(MTMineView *)mineView;
+@end
 
-@interface MTMineView : UIView
-
+@interface MTMineView : UICollectionReusableView
+@property (nonatomic ,weak)id<MTMineViewDelegate>delegate;
 @end

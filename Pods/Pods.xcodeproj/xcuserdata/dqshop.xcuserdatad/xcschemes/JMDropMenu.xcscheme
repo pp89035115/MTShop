@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5D318A2B3E8125D6847A777E1FEC8D34'
-               BlueprintName = 'ZJAnimationPopView'
+               BlueprintIdentifier = '2D8CDE81E83480C39CF627F8BC6D4CB0'
+               BlueprintName = 'JMDropMenu'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libZJAnimationPopView.a'>
+               BuildableName = 'libJMDropMenu.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

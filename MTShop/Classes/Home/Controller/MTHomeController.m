@@ -132,15 +132,6 @@ static NSString *const MTHomeLikeTitleViewId = @"MTHomeLikeTitleView";
 
 - (void)topViewSearchButtonClick:(MTHomeTopView *)topView
 {
-//    PYSearchViewController *searchViewController = [PYSearchViewController searchViewControllerWithHotSearches:nil searchBarPlaceholder:@"请输入" didSearchBlock:^(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText) {
-//
-//        [searchViewController.navigationController pushViewController:[[MTHomeSearchController alloc] init] animated:YES];
-//    }];
-//    searchViewController.searchHistoryStyle = PYHotSearchStyleNormalTag;
-//    searchViewController.delegate = self;
-//
-//    MTNavigationController *nav = [[MTNavigationController alloc] initWithRootViewController:searchViewController];
-//    [self presentViewController:nav animated:YES completion:nil];
     MTHomeSearchController *searchVc = [[MTHomeSearchController alloc]init];
     searchVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:searchVc animated:YES];
