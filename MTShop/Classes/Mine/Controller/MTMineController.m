@@ -11,13 +11,9 @@
 
 @interface MTMineController ()
 <
-UITableViewDataSource,
-UITableViewDelegate,
 UICollectionViewDelegate,
 UICollectionViewDataSource
 >
-@property (nonatomic ,strong)UITableView *tableView;
-@property (nonatomic ,strong)MTMineView *headView;
 @property (nonatomic ,strong)UICollectionView *collectionView;
 @end
 
@@ -48,89 +44,152 @@ static NSString *const MTMineViewId = @"MTMineView";
 #pragma mark - setupSubviews
 - (void)setupSubviews
 {
-    [self.view addSubview:self.tableView];
-}
-#pragma mark - setupHeadView
-- (MTMineView *)headView
-{
-    if (!_headView) {
-        _headView = [[MTMineView alloc]initWithFrame:CGRectMake(0, 0, gScreenWidth, gScreenHeight / 2.5)];
-        _headView.backgroundColor = MTMainColor ;
-    }return _headView;
+    [self.view addSubview:self.collectionView];
+    [self registerCollectionViewCell];
 }
 
 #pragma mark - setupCollectionView
 
-#pragma mark - SetupCollectionView
-
 - (UICollectionView *)collectionView
 {
     if (!_collectionView) {
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, gScreenWidth, gScreenHeight) collectionViewLayout:[UICollectionViewFlowLayout new]];
+        UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, gScreenWidth, gScreenHeight) collectionViewLayout:layout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.showsVerticalScrollIndicator = NO;
-        _collectionView.showsHorizontalScrollIndicator = NO;
-        _collectionView.indicatorStyle = UIScrollViewIndicatorStyleBlack;
-        _collectionView.userInteractionEnabled = YES;
-
+        _collectionView.backgroundColor = LHSeperatorColor;
     }return _collectionView;
 }
 
-- (void)setupCollectionView
+#pragma mark - registerCollectionViewCell
+- (void)registerCollectionViewCell
 {
-        [self.collectionView registerClass:[MTMineView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTMineViewId];
-//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifierForBaseCell];
+//    [self.collectionView registerClass:[MTHomeZujiCell class] forCellWithReuseIdentifier:MTHomeZujiCellId];
+   
+    [self.collectionView registerClass:[MTMineView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTMineViewId];
 }
 
 #pragma mark - <UICollectionViewDelegate,UICollectionViewDataSource>
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    
-    return 1;
+- (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 7;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    
-    return 10;
-}
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
-{
-    return CGSizeMake(0,0);
+    if (section == 0) {
+        return 1;
+    }
+    {
+        return 0;
+    }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UICollectionViewCell *cell =  [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
-    cell.backgroundColor = LHRandomColor;
-    return cell;
+    UICollectionViewCell *tempCell = nil;
+    if (indexPath.section == 0)//   足迹
+    {
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+        cell.backgroundColor = [UIColor whiteColor];
+        tempCell = cell;
+    }
+    else
+    {
+        
+    }
+    return tempCell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     
+    UICollectionReusableView *reusableview = nil;
+    if (kind == UICollectionElementKindSectionHeader){
+        if (indexPath.section == 0) {
+            MTMineView *mineView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTMineViewId forIndexPath:indexPath];
+            reusableview = mineView;
+        }
+        else
+        {
+            
+        }
+    }
+    if (kind == UICollectionElementKindSectionFooter) {
+        
+    }
+    
+    return reusableview;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return CGSizeMake(gScreenWidth / 3, gScreenHeight / 5);
-    
+#pragma mark - item宽高
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return CGSizeMake(gScreenWidth, 30);
+    }else if (indexPath.section == 1)
+    {
+        return CGSizeMake(gScreenWidth, gScreenWidth / 2);
+    }else if (indexPath.section == 2)
+    {
+        return CGSizeMake((gScreenWidth - 5) / 4, gScreenWidth / 6);
+    }else if (indexPath.section == 3)
+    {
+        return CGSizeMake(gScreenWidth, gScreenWidth / 4);
+    }else if (indexPath.section == 4)
+    {
+        return CGSizeMake(gScreenWidth, gScreenWidth / 4);
+    }else if (indexPath.section == 5)
+    {
+        return CGSizeMake((gScreenWidth - 4) / 2,(gScreenWidth - 4) / 2 + 40);
+    }
+    return CGSizeZero;
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
-{
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewLayoutAttributes *layoutAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+    if (indexPath.section == 4) {
+        
+    }
+    return layoutAttributes;
+}
+
+#pragma mark - head宽高
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    
+    if (section == 0) {
+        return CGSizeMake(gScreenWidth, gScreenHeight / 2.5);
+    }
+    
+    return CGSizeZero;
+}
+
+#pragma mark - foot宽高
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    
+    return CGSizeZero;
+}
+
+#pragma mark - <UICollectionViewDelegateFlowLayout>
+#pragma mark - X间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    if (section == 5) {
+        return 4;
+    }
+    return 0;
+}
+#pragma mark - Y间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    if (section == 4) {
+        return 2;
+    }else if (section == 5)
+    {
+        return 4;
+    }
     return 0;
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-{
-    return 0;
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(0, 0, 0, 0);
-}
 
 
 
