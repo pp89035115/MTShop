@@ -28,6 +28,7 @@
     if (!_avatarView) {
         _avatarView = [[UIImageView alloc]init];
         _avatarView.backgroundColor = LHSeperatorColor;
+        _avatarView.userInteractionEnabled = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(avatarAction)];
         [_avatarView addGestureRecognizer:tap];
     }return _avatarView;
@@ -52,6 +53,7 @@
         [_settingButton setTitle:@"设置" forState:UIControlStateNormal];
         _settingButton.titleLabel.font = Font(15);
 //        _settingButton.backgroundColor = LHRandomColor;
+        [_settingButton addTarget:self action:@selector(settingAction) forControlEvents:UIControlEventTouchUpInside];
     }return _settingButton;
 }
 

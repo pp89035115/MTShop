@@ -8,20 +8,51 @@
 
 #import "MTMineController.h"
 #import "MTMineView.h"
+#import "MTMineTopMenuCell.h"
+#import "MTMineTitleView.h"
+#import "MTMineItemCell.h"
 
 @interface MTMineController ()
 <
 UICollectionViewDelegate,
-UICollectionViewDataSource
+UICollectionViewDataSource,
+MTMineViewDelegate
 >
 @property (nonatomic ,strong)UICollectionView *collectionView;
+@property (nonatomic ,strong)NSArray *menuSource;
+@property (nonatomic ,strong)NSArray *itemSource;
 @end
 
 //headView
-static NSString *const MTMineViewId = @"MTMineView";
+static NSString *const MTMineViewId = @"MTMineViewId";
+static NSString *const MTMineTitleViewId = @"MTMineTitleViewId";
 
+//cell
+static NSString *const MTMineTopMenuCellId = @"MTMineTopMenuCellId";
+static NSString *const MTMineItemCellId = @"MTMineItemCellId";
 
 @implementation MTMineController
+
+- (NSArray *)menuSource
+{
+    if (!_menuSource) {
+        _menuSource = @[@{@"image":@"mine_dingyue",@"name":@"我的订阅"},
+                        @{@"image":@"mine_shoucang",@"name":@"我的收藏"},
+                        @{@"image":@"mine_fabu",@"name":@"我的发布"},
+                        @{@"image":@"mine_qiandao",@"name":@"我要签到"}];
+    }return _menuSource;
+}
+- (NSArray *)itemSource
+{
+    if (!_itemSource) {
+        _itemSource = @[@{@"image":@"mine_mucaibi",@"name":@"木材币"},
+                        @{@"image":@"mine_fankui",@"name":@"我要反馈"},
+                        @{@"image":@"mine_pinpai",@"name":@"我的品牌"},
+                        @{@"image":@"mine_mucaiquan",@"name":@"木材圈"},
+                        @{@"image":@"mine_liulan",@"name":@"浏览历史"},
+                        @{@"image":@"mine_guanyu",@"name":@"关于我们"}];
+    }return _itemSource;
+}
 
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -44,8 +75,8 @@ static NSString *const MTMineViewId = @"MTMineView";
 #pragma mark - setupSubviews
 - (void)setupSubviews
 {
-    [self.view addSubview:self.collectionView];
     [self registerCollectionViewCell];
+    [self.view addSubview:self.collectionView];
 }
 
 #pragma mark - setupCollectionView
@@ -54,7 +85,7 @@ static NSString *const MTMineViewId = @"MTMineView";
 {
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, gScreenWidth, gScreenHeight) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, -20, gScreenWidth, gScreenHeight) collectionViewLayout:layout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.showsVerticalScrollIndicator = NO;
@@ -65,19 +96,41 @@ static NSString *const MTMineViewId = @"MTMineView";
 #pragma mark - registerCollectionViewCell
 - (void)registerCollectionViewCell
 {
-//    [self.collectionView registerClass:[MTHomeZujiCell class] forCellWithReuseIdentifier:MTHomeZujiCellId];
-   
+    
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+    [self.collectionView registerClass:[MTMineTopMenuCell class] forCellWithReuseIdentifier:MTMineTopMenuCellId];
+    [self.collectionView registerClass:[MTMineItemCell class] forCellWithReuseIdentifier:MTMineItemCellId];
+
+    
     [self.collectionView registerClass:[MTMineView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTMineViewId];
+    [self.collectionView registerClass:[MTMineTitleView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTMineTitleViewId];
+    
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"footerViewId"];
 }
+
+#pragma mark - <MTMineViewDelegate>
+- (void)mt_mineViewAvatarClick:(MTMineView *)mineView
+{
+    LHFUNCTION
+}
+
+- (void)mt_mineViewSettingClick:(MTMineView *)mineView
+{
+    LHFUNCTION
+}
+
 
 #pragma mark - <UICollectionViewDelegate,UICollectionViewDataSource>
 - (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 7;
+    return 3;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (section == 0) {
-        return 1;
+        return self.menuSource.count;
+    }else if (section == 1)
+    {
+        return self.itemSource.count;
     }
     {
         return 0;
@@ -88,13 +141,20 @@ static NSString *const MTMineViewId = @"MTMineView";
     UICollectionViewCell *tempCell = nil;
     if (indexPath.section == 0)//   足迹
     {
-        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
-        cell.backgroundColor = [UIColor whiteColor];
+        MTMineTopMenuCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTMineTopMenuCellId forIndexPath:indexPath];
+        cell.source = self.menuSource[indexPath.item];
+        tempCell = cell;
+    }else if (indexPath.section == 1)
+    {
+        MTMineItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MTMineItemCellId forIndexPath:indexPath];
+        cell.itemSource = self.itemSource[indexPath.item];
         tempCell = cell;
     }
     else
     {
-        
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+        cell.backgroundColor = LHRandomColor;
+        tempCell = cell;
     }
     return tempCell;
 }
@@ -106,7 +166,14 @@ static NSString *const MTMineViewId = @"MTMineView";
     if (kind == UICollectionElementKindSectionHeader){
         if (indexPath.section == 0) {
             MTMineView *mineView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTMineViewId forIndexPath:indexPath];
+            mineView.delegate = self;
+            mineView.backgroundColor = MTMainColor;
             reusableview = mineView;
+        }else if (indexPath.section == 1)
+        {
+            MTMineTitleView *titleView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:MTMineTitleViewId forIndexPath:indexPath];
+            titleView.titleStr = @"个人服务";
+            reusableview = titleView;
         }
         else
         {
@@ -114,7 +181,8 @@ static NSString *const MTMineViewId = @"MTMineView";
         }
     }
     if (kind == UICollectionElementKindSectionFooter) {
-        
+         UICollectionReusableView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"footerViewId" forIndexPath:indexPath];
+        reusableview = footerView;
     }
     
     return reusableview;
@@ -123,22 +191,13 @@ static NSString *const MTMineViewId = @"MTMineView";
 #pragma mark - item宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return CGSizeMake(gScreenWidth, 30);
+        
+        return CGSizeMake(gScreenWidth / 4 , gScreenWidth / 4);
+
     }else if (indexPath.section == 1)
     {
-        return CGSizeMake(gScreenWidth, gScreenWidth / 2);
-    }else if (indexPath.section == 2)
-    {
-        return CGSizeMake((gScreenWidth - 5) / 4, gScreenWidth / 6);
-    }else if (indexPath.section == 3)
-    {
-        return CGSizeMake(gScreenWidth, gScreenWidth / 4);
-    }else if (indexPath.section == 4)
-    {
-        return CGSizeMake(gScreenWidth, gScreenWidth / 4);
-    }else if (indexPath.section == 5)
-    {
-        return CGSizeMake((gScreenWidth - 4) / 2,(gScreenWidth - 4) / 2 + 40);
+        return CGSizeMake(gScreenWidth / 2 - .5, gScreenWidth / 6);
+
     }
     return CGSizeZero;
 }
@@ -155,7 +214,10 @@ static NSString *const MTMineViewId = @"MTMineView";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     
     if (section == 0) {
-        return CGSizeMake(gScreenWidth, gScreenHeight / 2.5);
+        return CGSizeMake(gScreenWidth, gScreenHeight / 3);
+    }else if (section == 1)
+    {
+        return CGSizeMake(gScreenWidth, gScreenWidth / 7);
     }
     
     return CGSizeZero;
@@ -163,25 +225,30 @@ static NSString *const MTMineViewId = @"MTMineView";
 
 #pragma mark - foot宽高
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
-    
+    if (section == 0) {
+        return CGSizeMake(gScreenWidth, 10);
+    }
     return CGSizeZero;
 }
 
 #pragma mark - <UICollectionViewDelegateFlowLayout>
 #pragma mark - X间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    if (section == 5) {
-        return 4;
+    if (section == 0) {
+        return 0;
+    }else if (section ==1)
+    {
+        return .5;
     }
     return 0;
 }
 #pragma mark - Y间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    if (section == 4) {
+    if (section == 0) {
         return 2;
-    }else if (section == 5)
+    }else if (section == 1)
     {
-        return 4;
+        return .5;
     }
     return 0;
 }
