@@ -149,6 +149,7 @@
 		348D45911FFF11FC00A55681 /* mine_liulan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 348D458B1FFF11FC00A55681 /* mine_liulan@2x.png */; };
 		348D45921FFF11FC00A55681 /* mine_pinpai@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 348D458C1FFF11FC00A55681 /* mine_pinpai@2x.png */; };
 		348D45931FFF11FC00A55681 /* mine_fankui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 348D458D1FFF11FC00A55681 /* mine_fankui@2x.png */; };
+		348D45961FFF18A200A55681 /* MTDingYueBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348D45951FFF18A200A55681 /* MTDingYueBaseController.m */; };
 		34D71D531FEB5E99004D5466 /* sina_关闭.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D71D521FEB5E99004D5466 /* sina_关闭.png */; };
 		54940886778126DAF6FA484A /* libPods-MTShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7CC120350E645078F76770 /* libPods-MTShop.a */; };
 /* End PBXBuildFile section */
@@ -412,6 +413,8 @@
 		348D458B1FFF11FC00A55681 /* mine_liulan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_liulan@2x.png"; sourceTree = "<group>"; };
 		348D458C1FFF11FC00A55681 /* mine_pinpai@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_pinpai@2x.png"; sourceTree = "<group>"; };
 		348D458D1FFF11FC00A55681 /* mine_fankui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_fankui@2x.png"; sourceTree = "<group>"; };
+		348D45941FFF18A200A55681 /* MTDingYueBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTDingYueBaseController.h; sourceTree = "<group>"; };
+		348D45951FFF18A200A55681 /* MTDingYueBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTDingYueBaseController.m; sourceTree = "<group>"; };
 		34D71D521FEB5E99004D5466 /* sina_关闭.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sina_关闭.png"; sourceTree = "<group>"; };
 		84B9822701ABB0E2ECA8825B /* Pods-MTShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.release.xcconfig"; sourceTree = "<group>"; };
 		BD7CC120350E645078F76770 /* libPods-MTShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -708,6 +711,8 @@
 			children = (
 				3421855B1FE37DC70037A48C /* MTMineController.h */,
 				3421855C1FE37DC70037A48C /* MTMineController.m */,
+				348D45941FFF18A200A55681 /* MTDingYueBaseController.h */,
+				348D45951FFF18A200A55681 /* MTDingYueBaseController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1223,6 +1228,7 @@
 				342185751FE37E3C0037A48C /* MTMineView.m in Sources */,
 				342186391FE3B5C80037A48C /* UIView+draggable.m in Sources */,
 				3421861E1FE3B5C80037A48C /* UIImage+Blur.m in Sources */,
+				348D45961FFF18A200A55681 /* MTDingYueBaseController.m in Sources */,
 				3421861F1FE3B5C80037A48C /* UIImage+Capture.m in Sources */,
 				3409C2B31FF4892100946EC1 /* MTCityLocationView.m in Sources */,
 				342185661FE37DEB0037A48C /* MTMessageModel.m in Sources */,

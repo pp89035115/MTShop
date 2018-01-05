@@ -12,6 +12,8 @@
 #import "MTMineTitleView.h"
 #import "MTMineItemCell.h"
 
+#import "MTDingYueBaseController.h"
+
 @interface MTMineController ()
 <
 UICollectionViewDelegate,
@@ -121,6 +123,33 @@ static NSString *const MTMineItemCellId = @"MTMineItemCellId";
 
 
 #pragma mark - <UICollectionViewDelegate,UICollectionViewDataSource>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 0) {
+        if (indexPath.item == 0)//我的订阅
+        {
+            MTDingYueBaseController *dingyueBaseVc = [[MTDingYueBaseController alloc]init];
+            dingyueBaseVc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:dingyueBaseVc animated:YES];
+            
+        }else if (indexPath.item == 1)//我的收藏
+        {
+            
+        }else if (indexPath.item == 2)//我的发布
+        {
+            
+        }else if (indexPath.item == 3)//我要签到
+        {
+            
+        }
+    }else if (indexPath.section == 1)
+    {
+        
+    }
+}
+
+
 - (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 3;
 }
@@ -253,9 +282,7 @@ static NSString *const MTMineItemCellId = @"MTMineItemCellId";
     return 0;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
+
 
 
 
