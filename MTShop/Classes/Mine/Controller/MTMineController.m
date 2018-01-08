@@ -44,7 +44,7 @@ static NSString *const MTMineItemCellId = @"MTMineItemCellId";
                         @{@"image":@"mine_qiandao",@"name":@"我要签到"}];
     }return _menuSource;
 }
-- (NSArray *)itemSource
+- (NSArray *)itemSource//
 {
     if (!_itemSource) {
         _itemSource = @[@{@"image":@"mine_mucaibi",@"name":@"木材币"},
@@ -281,12 +281,6 @@ static NSString *const MTMineItemCellId = @"MTMineItemCellId";
     }
     return 0;
 }
-
-
-
-
-
-
 
 
 @end

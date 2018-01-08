@@ -98,6 +98,9 @@
 		342186461FE3B5C80037A48C /* UIViewController+BHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421860C1FE3B5C80037A48C /* UIViewController+BHExtension.m */; };
 		342186471FE3B5C80037A48C /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3421860E1FE3B5C80037A48C /* UIViewController+Extension.m */; };
 		342186481FE3B5C80037A48C /* UIViewController+LeftBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 342186101FE3B5C80037A48C /* UIViewController+LeftBarButton.m */; };
+		342504EA20030FCF003A63F5 /* MTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 342504E920030FCF003A63F5 /* MTUserManager.m */; };
+		342504ED20031DD0003A63F5 /* MTLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342504EC20031DD0003A63F5 /* MTLoginController.m */; };
+		342504F020031DE2003A63F5 /* MTRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342504EF20031DE2003A63F5 /* MTRegisterController.m */; };
 		3440B55D1FE8FECC003DDC72 /* tabBarPublish_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3440B5531FE8FECB003DDC72 /* tabBarPublish_h@2x.png */; };
 		3440B55E1FE8FECC003DDC72 /* tabBarHome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3440B5541FE8FECB003DDC72 /* tabBarHome@2x.png */; };
 		3440B55F1FE8FECC003DDC72 /* tabBarPublish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3440B5551FE8FECB003DDC72 /* tabBarPublish@2x.png */; };
@@ -339,6 +342,12 @@
 		3421860E1FE3B5C80037A48C /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
 		3421860F1FE3B5C80037A48C /* UIViewController+LeftBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LeftBarButton.h"; sourceTree = "<group>"; };
 		342186101FE3B5C80037A48C /* UIViewController+LeftBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LeftBarButton.m"; sourceTree = "<group>"; };
+		342504E820030FCF003A63F5 /* MTUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTUserManager.h; sourceTree = "<group>"; };
+		342504E920030FCF003A63F5 /* MTUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTUserManager.m; sourceTree = "<group>"; };
+		342504EB20031DD0003A63F5 /* MTLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLoginController.h; sourceTree = "<group>"; };
+		342504EC20031DD0003A63F5 /* MTLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLoginController.m; sourceTree = "<group>"; };
+		342504EE20031DE2003A63F5 /* MTRegisterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTRegisterController.h; sourceTree = "<group>"; };
+		342504EF20031DE2003A63F5 /* MTRegisterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTRegisterController.m; sourceTree = "<group>"; };
 		3440B5531FE8FECB003DDC72 /* tabBarPublish_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarPublish_h@2x.png"; sourceTree = "<group>"; };
 		3440B5541FE8FECB003DDC72 /* tabBarHome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarHome@2x.png"; sourceTree = "<group>"; };
 		3440B5551FE8FECB003DDC72 /* tabBarPublish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarPublish@2x.png"; sourceTree = "<group>"; };
@@ -713,6 +722,10 @@
 				3421855C1FE37DC70037A48C /* MTMineController.m */,
 				348D45941FFF18A200A55681 /* MTDingYueBaseController.h */,
 				348D45951FFF18A200A55681 /* MTDingYueBaseController.m */,
+				342504EB20031DD0003A63F5 /* MTLoginController.h */,
+				342504EC20031DD0003A63F5 /* MTLoginController.m */,
+				342504EE20031DE2003A63F5 /* MTRegisterController.h */,
+				342504EF20031DE2003A63F5 /* MTRegisterController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -722,6 +735,8 @@
 			children = (
 				342185671FE37DF90037A48C /* MTMineModel.h */,
 				342185681FE37DF90037A48C /* MTMineModel.m */,
+				342504E820030FCF003A63F5 /* MTUserManager.h */,
+				342504E920030FCF003A63F5 /* MTUserManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1265,6 +1280,7 @@
 				342186141FE3B5C80037A48C /* NSString+Extension.m in Sources */,
 				3421862A1FE3B5C80037A48C /* UIImage+Vector.m in Sources */,
 				3421862E1FE3B5C80037A48C /* UIKitExtend.m in Sources */,
+				342504EA20030FCF003A63F5 /* MTUserManager.m in Sources */,
 				3458F3F61FF2324D00A73137 /* MTQiandaoView.m in Sources */,
 				3421856C1FE37E0D0037A48C /* MTNearbyView.m in Sources */,
 				342186201FE3B5C80037A48C /* UIImage+Color.m in Sources */,
@@ -1286,6 +1302,7 @@
 				3421856F1FE37E230037A48C /* MTPubilshView.m in Sources */,
 				342185241FE375110037A48C /* main.m in Sources */,
 				342186171FE3B5C80037A48C /* UIButton+Extension.m in Sources */,
+				342504ED20031DD0003A63F5 /* MTLoginController.m in Sources */,
 				342185351FE37B140037A48C /* MTHomeController.m in Sources */,
 				342186381FE3B5C80037A48C /* UIView+Debug.m in Sources */,
 				3421861B1FE3B5C80037A48C /* UIImage+Alpha.m in Sources */,
@@ -1315,6 +1332,7 @@
 				342186281FE3B5C80037A48C /* UIImage+Resize.m in Sources */,
 				3421859C1FE3B5150037A48C /* MTBaseTableViewCell.m in Sources */,
 				3421855D1FE37DC70037A48C /* MTMineController.m in Sources */,
+				342504F020031DE2003A63F5 /* MTRegisterController.m in Sources */,
 				342186461FE3B5C80037A48C /* UIViewController+BHExtension.m in Sources */,
 				342186261FE3B5C80037A48C /* UIImage+PDF.m in Sources */,
 				3440B56E1FE90C62003DDC72 /* zhIconLabel.m in Sources */,
