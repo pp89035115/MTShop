@@ -8,6 +8,7 @@
 
 #import "MTUserManager.h"
 #import "NSDictionary+BHExtension.h"
+#import "MTLoginController.h"
 
 static NSString * const KEY_USERDATA = @"userData";
 static NSString * const KEY_USERID = @"sid";
@@ -44,9 +45,9 @@ static NSString * const KEY_USERPASSWORD = @"password";
 };
 
 + (void)gotoLoginView:(UIViewController *)controller{
-//    MTLoginViewController *loginVc = [[BHLoginViewController alloc]init];
-//    loginVc.hidesBottomBarWhenPushed = YES;
-//    [controller.navigationController pushViewController:loginVc animated:YES];
+    MTLoginController *loginVc = [[MTLoginController alloc]init];
+    loginVc.hidesBottomBarWhenPushed = YES;
+    [controller.navigationController pushViewController:loginVc animated:YES];
 };
 
 @end

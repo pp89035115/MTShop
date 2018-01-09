@@ -12,6 +12,7 @@
 #import "MTMineTitleView.h"
 #import "MTMineItemCell.h"
 
+#import "MTLoginController.h"
 #import "MTDingYueBaseController.h"
 
 @interface MTMineController ()
@@ -114,6 +115,8 @@ static NSString *const MTMineItemCellId = @"MTMineItemCellId";
 - (void)mt_mineViewAvatarClick:(MTMineView *)mineView
 {
     LHFUNCTION
+    [MTUserManager gotoLoginView:self];
+//    MTLoginController *loginVc = [MTLoginController alloc]
 }
 
 - (void)mt_mineViewSettingClick:(MTMineView *)mineView
