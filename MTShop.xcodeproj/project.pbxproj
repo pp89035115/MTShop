@@ -101,6 +101,7 @@
 		342504EA20030FCF003A63F5 /* MTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 342504E920030FCF003A63F5 /* MTUserManager.m */; };
 		342504ED20031DD0003A63F5 /* MTLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342504EC20031DD0003A63F5 /* MTLoginController.m */; };
 		342504F020031DE2003A63F5 /* MTRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342504EF20031DE2003A63F5 /* MTRegisterController.m */; };
+		343EA2712005DCC80066D099 /* password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 343EA2702005DCC70066D099 /* password@2x.png */; };
 		3440B55D1FE8FECC003DDC72 /* tabBarPublish_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3440B5531FE8FECB003DDC72 /* tabBarPublish_h@2x.png */; };
 		3440B55E1FE8FECC003DDC72 /* tabBarHome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3440B5541FE8FECB003DDC72 /* tabBarHome@2x.png */; };
 		3440B55F1FE8FECC003DDC72 /* tabBarPublish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3440B5551FE8FECB003DDC72 /* tabBarPublish@2x.png */; };
@@ -348,6 +349,7 @@
 		342504EC20031DD0003A63F5 /* MTLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTLoginController.m; sourceTree = "<group>"; };
 		342504EE20031DE2003A63F5 /* MTRegisterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTRegisterController.h; sourceTree = "<group>"; };
 		342504EF20031DE2003A63F5 /* MTRegisterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTRegisterController.m; sourceTree = "<group>"; };
+		343EA2702005DCC70066D099 /* password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password@2x.png"; sourceTree = "<group>"; };
 		3440B5531FE8FECB003DDC72 /* tabBarPublish_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarPublish_h@2x.png"; sourceTree = "<group>"; };
 		3440B5541FE8FECB003DDC72 /* tabBarHome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarHome@2x.png"; sourceTree = "<group>"; };
 		3440B5551FE8FECB003DDC72 /* tabBarPublish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarPublish@2x.png"; sourceTree = "<group>"; };
@@ -1048,6 +1050,7 @@
 		348D45791FFF06FB00A55681 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				343EA2702005DCC70066D099 /* password@2x.png */,
 				348D457B1FFF070300A55681 /* mine_dingyue@2x.png */,
 				348D457C1FFF070300A55681 /* mine_fabu@2x.png */,
 				348D457A1FFF070300A55681 /* mine_qiandao@2x.png */,
@@ -1140,6 +1143,7 @@
 				348D45901FFF11FC00A55681 /* mine_mucaiquan@2x.png in Resources */,
 				348D458E1FFF11FC00A55681 /* mine_mucaibi@2x.png in Resources */,
 				3440B55F1FE8FECC003DDC72 /* tabBarPublish@2x.png in Resources */,
+				343EA2712005DCC80066D099 /* password@2x.png in Resources */,
 				344632051FF36228008B4F49 /* pinpaiLogo.png in Resources */,
 				348D45801FFF070400A55681 /* mine_fabu@2x.png in Resources */,
 				348D45911FFF11FC00A55681 /* mine_liulan@2x.png in Resources */,
