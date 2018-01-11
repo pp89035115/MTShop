@@ -34,7 +34,7 @@ UITextFieldDelegate
     [self.view setBackgroundColor:[UIColor whiteColor]];
     CGFloat padding = 10;
     CGFloat text_w = gScreenWidth - padding *2;
-    CGFloat text_h = gScreenHeight / 10;
+    CGFloat text_h = gScreenWidth / 6;
     
     UITextField *nameText = [[UITextField alloc]initWithFrame:CGRectMake(padding, padding *2 + kScreenTopStatusNaviHeight, text_w, text_h)];
     nameText.backgroundColor = LHSeperatorColor;
@@ -81,7 +81,6 @@ UITextFieldDelegate
     self.navigationItem.rightBarButtonItem = rightBarButton;
     
 }
-
 - (void)loginAction
 {
     LHFUNCTION
