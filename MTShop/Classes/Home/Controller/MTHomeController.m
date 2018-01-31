@@ -28,6 +28,8 @@
 #import "MTHomeQiyeTitleView.h"
 #import "MTHomeLikeTitleView.h"
 
+#import "MTHomeModel.h"
+
 @interface MTHomeController ()
 <
 MTCityListControllerDelegate,
@@ -43,6 +45,7 @@ PYSearchViewControllerDataSource
 @property (nonatomic ,strong)MTQiandaoView *qiandaoView;
 @property (nonatomic ,strong)ZJAnimationPopView *popView;
 @property (nonatomic ,strong)NSArray *pinpais;
+@property (nonatomic ,strong)MTHomeModel *homeData;
 @end
 
 /*cell*/
@@ -92,6 +95,24 @@ static NSString *const MTHomeLikeTitleViewId = @"MTHomeLikeTitleView";
     
     [super viewDidLoad];
     [self setupSubViews];
+    [self getHomeData];
+}
+
+- (void)getHomeData
+{
+    LHWeakSelf;
+    [MTRequest GET:MTHomeUrl parameters:nil success:^(id responseObject) {
+        NSLog(@"+++ homeData: %@ ",responseObject);
+        if ([responseObject[@"rs"]intValue] == 1) {
+            weakSelf.homeData = responseObject[@""];
+        }else
+        {
+            [SVProgressHUD showErrorWithStatus:responseObject[@"message"]];
+        }
+        [weakSelf.collectionView reloadData];
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 #pragma mark - setupSubViews

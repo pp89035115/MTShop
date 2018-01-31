@@ -156,6 +156,7 @@
 		348D45961FFF18A200A55681 /* MTDingYueBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348D45951FFF18A200A55681 /* MTDingYueBaseController.m */; };
 		34D71D531FEB5E99004D5466 /* sina_关闭.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D71D521FEB5E99004D5466 /* sina_关闭.png */; };
 		54940886778126DAF6FA484A /* libPods-MTShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7CC120350E645078F76770 /* libPods-MTShop.a */; };
+		B4598A28201F3A2000375B31 /* MTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4598A27201F3A2000375B31 /* MTRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -428,6 +429,8 @@
 		348D45951FFF18A200A55681 /* MTDingYueBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTDingYueBaseController.m; sourceTree = "<group>"; };
 		34D71D521FEB5E99004D5466 /* sina_关闭.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sina_关闭.png"; sourceTree = "<group>"; };
 		84B9822701ABB0E2ECA8825B /* Pods-MTShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.release.xcconfig"; sourceTree = "<group>"; };
+		B4598A26201F3A2000375B31 /* MTRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTRequest.h; sourceTree = "<group>"; };
+		B4598A27201F3A2000375B31 /* MTRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTRequest.m; sourceTree = "<group>"; };
 		BD7CC120350E645078F76770 /* libPods-MTShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33BFE22354CC11FD39BCDF9 /* Pods-MTShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTShop/Pods-MTShop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -815,6 +818,8 @@
 				3421858A1FE392E00037A48C /* MTShopAPI.h */,
 				3421858B1FE392F20037A48C /* MTShopDefine.h */,
 				3421858C1FE3934C0037A48C /* MTShopMacro.h */,
+				B4598A26201F3A2000375B31 /* MTRequest.h */,
+				B4598A27201F3A2000375B31 /* MTRequest.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -1257,6 +1262,7 @@
 				344632011FF34F4A008B4F49 /* MTHomePinPaiCell.m in Sources */,
 				342185961FE3B42C0037A48C /* MTBaseModel.m in Sources */,
 				342185691FE37DF90037A48C /* MTMineModel.m in Sources */,
+				B4598A28201F3A2000375B31 /* MTRequest.m in Sources */,
 				344632081FF363D7008B4F49 /* MTHomeShishiTitleView.m in Sources */,
 				3458F3E61FF1DC9E00A73137 /* MTCityListController.m in Sources */,
 				3421861C1FE3B5C80037A48C /* UIImage+animatedGIF.m in Sources */,
@@ -1466,7 +1472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CQ24Z5PJ5;
-				GCC_PREFIX_HEADER = /Users/dqshop/Desktop/MTShop/MTShop/Tools/Config/MTShop.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MTShop/Tools/Config/MTShop.pch";
 				INFOPLIST_FILE = MTShop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1484,7 +1490,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CQ24Z5PJ5;
-				GCC_PREFIX_HEADER = /Users/dqshop/Desktop/MTShop/MTShop/Tools/Config/MTShop.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MTShop/Tools/Config/MTShop.pch";
 				INFOPLIST_FILE = MTShop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

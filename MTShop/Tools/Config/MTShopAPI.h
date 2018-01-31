@@ -9,6 +9,10 @@
 #ifndef MTShopAPI_h
 #define MTShopAPI_h
 
+/*https://www.showdoc.cc/mtwy 接口文档*/
+#define MTBaseUrl @"http://39.104.14.110"
 
+/*首页*/
+#define MTHomeUrl MTBaseUrl@"/common/home/"
 
 #endif /* MTShopAPI_h */

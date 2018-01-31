@@ -10,7 +10,7 @@
 
 @interface MTHomeZujiCell ()
 @property (nonatomic ,strong)UIButton *zujiButton;
-@property (nonatomic ,strong)UILabel *zujiLabel;
+@property (nonatomic ,strong)UIScrollView *zujiView;
 @end
 
 
@@ -34,18 +34,17 @@
     }return _zujiButton;
 }
 
-- (UILabel *)zujiLabel
+- (UIScrollView *)zujiView
 {
-    if (!_zujiLabel) {
-        _zujiLabel = [[UILabel alloc]init];
-        _zujiLabel.font = Font(13);
-    }return _zujiLabel;
+    if (!_zujiView) {
+        _zujiView = [[UIScrollView alloc]init];
+    }return _zujiView;
 }
 
 - (void)setupUI
 {
     [self.contentView addSubview:self.zujiButton];
-    [self.contentView addSubview:self.zujiLabel];
+    [self.contentView addSubview:self.zujiView];
 }
 
 - (void)layoutSubviews
@@ -56,7 +55,7 @@
     self.zujiButton.frame = CGRectMake(0, 0, button_w, button_h);
     [self.zujiButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -self.zujiButton.imageView.size.width, 0, self.zujiButton.imageView.size.width)];
     [self.zujiButton setImageEdgeInsets:UIEdgeInsetsMake(0, self.zujiButton.titleLabel.bounds.size.width, 0, -self.zujiButton.titleLabel.bounds.size.width)];
-    self.zujiLabel.frame = CGRectMake(CGRectGetMaxX(self.zujiButton.frame), 0, self.width - button_w, button_h);
+    self.zujiView.frame = CGRectMake(CGRectGetMaxX(self.zujiButton.frame), 0, self.width - button_w, button_h);
 }
 
 @end

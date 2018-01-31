@@ -8,6 +8,37 @@
 
 #import "MTHomeModel.h"
 
+@implementation MTFootmark
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"Id":@"id"};
+}
+@end
+
+@implementation MTSlide
+
+@end
+
+@implementation MTBrand
+
+@end
+
+@implementation MTSelling
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"Id":@"id"};
+}
+@end
+
+@implementation MTAlways
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"Id":@"id",
+             @"Description":@"description"
+             };
+}
+@end
+
 @implementation MTHomeModel
 
 @end
